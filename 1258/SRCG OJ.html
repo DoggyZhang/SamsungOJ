@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://109.131.7.129/OJ/problem.php?cid=1093&pid=0 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://109.131.7.129/favicon.ico">
+
+    <title>SRCG OJ</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="./SRCG OJ_files/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="./SRCG OJ_files/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./SRCG OJ_files/local.css">
+
+
+
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://109.131.7.129/OJ/">SRCG OJ</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	                    <li><a href="http://109.131.7.129/OJ/bbs.php">讨论版</a></li>
+	      <li><a href="http://109.131.7.129/OJ/faqs.php">常见问答</a></li>
+              <li><a href="http://109.131.7.129/OJ/problemset.php">问题</a></li>
+              <li><a href="http://109.131.7.129/OJ/status.php">状态</a></li>
+              <li><a href="http://109.131.7.129/OJ/ranklist.php">排名</a></li>
+              <li><a href="http://109.131.7.129/OJ/contest.php">竞赛&amp;作业</a></li>
+	      <li><a>[</a></li>
+              <li class="active"><a href="http://109.131.7.129/OJ/contest.php?cid=1093">
+			问题	      </a></li>
+               <li class="active"><a href="http://109.131.7.129/OJ/status.php?cid=1093">
+			状态	      </a></li>
+              <li class="active"><a href="http://109.131.7.129/OJ/contestrank.php?cid=1093">
+			排名	      </a></li>
+              <!--<li  class="active" ><a href="contestrank-oi.php?cid=1093">
+			OI排名	      </a></li>-->
+              <li class="active"><a href="http://109.131.7.129/OJ/conteststatistics.php?cid=1093">
+			统计	      </a></li>
+	      <li><a>]</a></li>
+              <!--<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+	-->
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="http://109.131.7.129/OJ/problem.php?cid=1093&amp;pid=0#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">登录</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="./SRCG OJ_files/profile.php"></script><li><a href="http://109.131.7.129/OJ/loginpage.php">登录</a></li>&nbsp;<li><a href="http://109.131.7.129/OJ/registerpage.php">注册</a></li>&nbsp;
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron"><marquee id="broadcast" scrollamount="3" scrolldelay="30" onmouseover="this.stop()" onmouseout="this.start()" class="toprow">~SRC-G Online Judge系统~ 讲师团成员:suxian.zhang(校长);shuyi.luo(专家);junnan.fu(版主);jianhui.yan;y2016.liu;yuqing26.wu;hr.z;jx.liang;qyong.liang;tianwei.hong;jiaqi.shao;jian.guan;jida.liu;yiluo.huang;
+</marquee>
+	
+<title>问题 A: ★置业顾问（考试版） </title><center><h2>问题 A: ★置业顾问（考试版）</h2><span class="green">时间限制: </span>3 Sec&nbsp;&nbsp;<span class="green">内存限制: </span>256 MB<br><span class="green">提交: </span>45&nbsp;&nbsp;<span class="green">解决: </span>22<br>[<a href="http://109.131.7.129/OJ/submitpage.php?cid=1093&amp;pid=0&amp;langmask=0">提交</a>][<a href="http://109.131.7.129/OJ/problemstatus.php?id=1258">状态</a>][<a href="http://109.131.7.129/OJ/bbs.php?pid=1258&amp;cid=1093">讨论版</a>]</center><h2>题目描述</h2><div class="content"><p>
+	X公司想投资一个大型商场，恰逢政府要对一块99*26的区域进行招标，因为环境的原因，商场
+</p>
+<p>
+	建立到每块区域的利润都不同，而且有的区域可能与其他区域可获取的利润相关。假设你是负
+</p>
+<p>
+	责X公司的置业顾问，总经理需要你提供所有区域可能的利润的报表，目前你有一个助手，会
+</p>
+<p>
+	帮你陆续录入每个区域的计算公式，你负责计算出所有区域可获取的利润，基本的输入输出函
+</p>
+<p>
+	数已经提供在main.cpp中，请完成main.cpp中初始化(initTable)和更新报表(updateCell,存
+</p>
+<p>
+	在动态利润区域返回false，否则返回true)两个功能
+</p>
+<p>
+	<br>
+</p>
+<p>
+	初始化：每个区域初始（即无计算公式的区域）的利润为0<br>
+更新区域：更新(x,y)处的计算公式并更新报表
+</p>
+<p>
+	<br>
+</p>
+<p>
+	约束条件：<br>
+1、当区域形成环时，这几个区域的利润是动态的，他们最终的利润等于动态利润区域的总数
+</p>
+<p>
+	<img alt="" src="./SRCG OJ_files/20161228120323_55061.png"><br>
+2、一个区域的利润计算公式与动态利润区域相关时，无论公式中动态利润区域是否能被消去
+</p>
+<p>
+	，都算作该区域为动态利润区域
+</p>
+<p>
+	<img alt="" src="./SRCG OJ_files/20161228120335_98946.png"><br>
+3、每个计算公式长度不超过200个字符，共有99行和26列，行用[1-99]输入用[0-98]表示，列
+</p>
+<p>
+	用[A-Z]输入用[0-25]表示,防止数字过大，每次计算的结果用100000007取余
+</p>
+<p>
+	<br>
+</p>
+<p>
+	</p><table bordercolor="#000000" style="width:100%;" border="1" cellspacing="0" cellpadding="2">
+		<tbody>
+			<tr>
+				<td>
+					initTable()<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						void initTable()
+					</p>
+					<p>
+						- A function that is called whenever a test case starts and which initializes the table.
+					</p>
+					<p>
+						Parametes:
+					</p>
+					<p>
+						none
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					updateCell()<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						bool updateCell(int row, int col, char equation[], int value[][])
+					</p>
+					<p>
+						- Modifies the value or expression of a certain cell, renews the values of all cells in the table and returns
+					</p>
+					<p>
+						- In case row=0, col=0, it refers to A1 cell. In case row=98, col=25, it refers to Z99 cell
+					</p>
+					<p>
+						Parameters:
+					</p>
+					<p>
+						- row&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [in] row index of modifying cell
+					</p>
+					<p>
+						- col&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [in] column index of modifying cell
+					</p>
+					<p>
+						- equation&nbsp;&nbsp;&nbsp;&nbsp; [in] expression or value of modifying cell
+					</p>
+					<p>
+						- value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[out] renewed result value of all cells in the table.
+					</p>
+					<p>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The value of each cell is divided by 100000007 and the remainder is stored
+					</p>
+					<p>
+						Returns:
+					</p>
+					<p>
+						- true&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All cells being properly calculated
+					</p>
+					<p>
+						- false&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; One or more undermined cells exist （有环存在）
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+<p></p>
+<p>
+	<br>
+</p>
+<p>
+	[ Main.cpp ]
+</p>
+<p>
+</p><pre class="prettyprint lang-js">#include &lt;stdio.h&gt;
+
+#define WIDTH	26
+#define HEIGHT	99
+#define LENGTH	200
+const int THRESHOLD = 100000007;
+static int value[HEIGHT][WIDTH];
+
+extern void initTable();
+extern bool updateCell(int row, int col, char equation[LENGTH], int value[HEIGHT][WIDTH]);
+
+int main_init(){
+	for(int i = 0; i &lt; HEIGHT; ++i){
+		for(int j = 0; j &lt; WIDTH; ++j){
+			value[i][j] = 0;
+		}
+	}
+	int cmd = 0;
+	scanf("%d", &amp;cmd);
+	return cmd;
+}
+
+int calcChecksum(int value[HEIGHT][WIDTH], bool ret){
+	int sum = 0;
+	for(int i = 0; i &lt; HEIGHT; ++i){
+		for(int j = 0; j &lt; WIDTH; ++j){			
+			sum += value[i][j];
+			sum %= THRESHOLD;
+		}
+	}
+	if(!ret) ++sum;
+	sum %= THRESHOLD;
+	if(sum &lt; 0) sum += THRESHOLD;
+	return sum;
+}
+
+int main(){
+	setbuf(stdout, NULL);
+	//freopen("sample_input.txt", "r", stdin);
+	
+	int T;
+    int totalScore = 0;
+	scanf("%d", &amp;T);
+	for(int tc = 1; tc &lt;= T; ++tc){
+		initTable();
+		int row, col;
+		char input[LENGTH];
+		int checksumIn = 0;
+		int cmd = main_init();        
+		int score = 0;
+		
+		for(int i = 0; i &lt; cmd; ++i){
+			scanf("%d %d %s %d", &amp;row, &amp;col, input, &amp;checksumIn);		
+			if(checksumIn &lt; 0) checksumIn += THRESHOLD;
+			bool ret = updateCell(row, col, input, value);
+			int checksum = calcChecksum(value, ret);			
+			if(checksumIn == checksum) ++score;
+		}	
+		printf("#%d %d\n", tc, score);
+		totalScore += score;
+	}
+	printf("TotalScore = %d\n", totalScore);
+
+	return 0;
+}</pre>
+	<p>
+		<br>
+	</p>
+	<p>
+		[ User.cpp ]
+	</p>
+	<p>
+</p><pre class="prettyprint lang-js">#define WIDTH	26
+#define HEIGHT	99
+#define LENGTH	200
+const int THRESHOLD = 100000007;
+char Table[HEIGHT][WIDTH][LENGTH];
+
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+
+void initTable(){
+    // TO DO	
+}
+
+bool updateCell(int row, int col, char equation[LENGTH], int value[HEIGHT][WIDTH]){    
+    // TO DO    	
+	
+	return true; // Need to be changed
+}
+</pre>
+		<p>
+			<br>
+		</p></div><h2>输入</h2><div class="content">请详细阅读Main部分代码</div><h2>输出</h2><div class="content"><p>
+	请详细阅读Main部分代码
+</p>
+<p>
+	每个case以“#T score” 格式输出。
+</p>
+<p>
+	最后输出总分数（用来判断算法的准确程度）
+</p></div><h2>样例输入</h2>
+<pre class="content"><span class="sampledata">4
+14
+0 0 10 10
+1 0 -10 0
+2 0 =100 100
+3 0 =-200 -100
+0 1 =A1 -90
+1 1 =-A1+A2 -110
+2 1 =A2-A1+A1-A1 -130
+3 1 =A2+10000-5000 4860
+0 2 0 4860
+1 2 -0 4860
+2 2 =0 4860
+3 2 =-0 4860
+0 3 =A1+C1 4870
+1 3 =A2+C4 4860
+10
+0 0 2013 2013
+0 1 -1234 779
+1 0 =A1 2792
+1 1 =A1+B1 3571
+2 0 =A2-B2 4805
+2 1 =C4-A2 2792
+3 0 -10000 -7208
+3 1 10000 2792
+0 2 =A1+B1+A2+A4 -4416
+1 2 =B1-B1+A1+A1+B4 9610
+12
+0 0 =A1 2
+3 0 =E3 2
+1 1 =C2 2
+4 1 39 41
+1 2 =B2+C1 49
+3 2 =A4-D5 49
+0 3 -5 44
+0 4 =B5-D1 88
+2 4 =C4+D3 115
+4 4 =A1+B5 128
+3 0 10 125
+0 3 =E1-10 106
+100
+29 16 -1540 -1540
+64 11 5883 4343
+78 20 -7826 -3483
+62 17 5199 1716
+24 11 -7546 -5830
+69 20 =Q30+L65-U79-U79-R63-Q30+L65-Q30+R63+R63 28327
+23 11 =L65+Q30-L25+L25-Q30-L65+L25-R63-L65-R63 4500
+14 18 =L65-R63-Q30+L65-U79+U79+R63-U79-U79-L65 27575
+69 22 =L65+Q30+L65-U79-L25+U79-L25+Q30-R63-L25 53700
+27 3 =Q30-L65-L65+U79+R63-Q30-U79+Q30+R63-R63 45593
+80 17 =U70-D28+S15+D28+W70-W70-S15+L24-D28-L24 87857
+76 20 =L24+W70-D28-L24-U70+S15+L24-U70+D28-U70 10759
+37 19 =D28+U70+S15-L24-W70+W70-L24-S15+U70-S15 95545
+17 13 =D28+D28-D28+D28+U70+L24-U70+S15+U70+D28 104629
+84 5 =U70+S15+W70+W70-W70+L24+L24-L24-U70-W70 103877
+35 7 =F85+R81+T38+N18-U77-N18+T38+T38+T38-F85 562383
+72 22 =R81+F85+F85+T38+F85+U77+U77-U77-R81+U77 490717
+21 3 =T38+T38+T38-F85+U77+T38+F85+U77+N18+T38 769535
+45 2 =T38+N18+N18+T38-T38-F85+N18-R81-F85-F85 841565
+61 14 =U77-N18+F85-T38+F85+T38+F85-N18-U77-R81 778877
+93 22 =O62-H36-O62+H36-W73-D22-H36+W73-C46+D22 248341
+72 6 =W73+H36+C46-D22-C46+D22+H36-C46-H36+W73 491485
+53 15 =D22+O62+C46+C46-W73+H36-W73+C46-D22+W73 1175059
+68 3 =O62-C46-O62+W73+O62+C46-W73-C46-W73-W73 1183673
+69 1 =O62-O62-O62-W73-C46-D22-O62-H36-O62+C46 706079
+97 14 =W94+B70+B70+B70+B70-P54-W94-W94-D69-P54 -2049523
+30 17 =G73-D69-B70+G73+W94-D69-G73+D69+W94-G73 -2641615
+10 0 =B70+D69+G73+D69-P54+G73+B70+W94+D69-B70 -3821189
+4 17 =W94+B70-W94-P54+D69-W94+P54-G73-D69-D69 -4020005
+96 16 =P54+D69+P54+G73+W94+D69-W94+P54-W94-G73 -1421519
+37 24 =Q97-R5+A11-Q97-R5+Q97+Q97-R31-R5-R5 3983235
+29 14 =Q97+Q97-R31+A11+A11+R5-R5-R31+R5-O98 10562029
+43 25 =Q97+R5+R31+R5+Q97-O98+O98-A11-R5+O98 13392065
+96 7 =R5-R31+R31+R31+Q97+R31+Q97+Q97-A11+O98 18228495
+98 17 =Q97+R31-A11-Q97-R31+Q97-R5+Q97+Q97+A11 26222769
+24 20 =Y38-Z44-O30-Z44-Z44+Y38-O30-R99+H97+Y38 17631491
+51 5 =Y38-Z44-Y38-R99+Y38-Y38-Y38-H97+R99+H97 9396701
+35 9 =R99+H97+O30-Y38-R99-R99+O30+Z44+Y38-Y38 16821727
+43 22 =R99-Z44+Y38+H97-O30+Z44-Z44-Z44+Z44+R99 33642629
+94 7 =Z44-R99+Z44-R99+O30+O30-R99+Z44+H97-Z44 33313897
+96 11 =U25-H95-W44-J36+H95+W44-F52-H95+H95+J36 32957409
+0 12 =F52+U25+W44-J36+U25-J36+F52-U25+U25+H95 947391
+37 20 =H95+H95-J36-U25+J36+H95-W44+H95+F52+F52 -25066741
+43 23 =U25-J36+W44-F52+W44+J36-H95+F52+F52-U25 669005
+72 11 =U25+W44+F52+F52-H95+W44+W44+W44+U25-H95 34957941
+82 25 =M1+L97+L73-L97-X44-L97-U38+L73+M1+U38 14136519
+36 0 =L97-L97+M1+U38-L73-X44-L97-U38+L97-U38 48115958
+98 22 =L97+L73-L97+U38+L73-X44-L73+L73+U38+U38 12915688
+65 17 =X44-L73-M1-L97-X44+L97-U38+M1-X44-L97 -20738374
+10 4 =L97-X44+L73-L97+U38+U38-L73+U38-U38+M1 -30512395
+47 25 =Z83+W99+A37+Z83-Z83-R66+W99-E11-W99+A37 24852874
+32 25 =E11+W99+R66-R66+W99-Z83-Z83+W99-R66-W99 19975219
+37 23 =W99-A37+R66+A37+Z83+A37+R66-R66+Z83-E11 -46768497
+2 12 =A37-A37-Z83+R66+E11+Z83+R66-E11-Z83+Z83 -14076614
+84 8 =R66-W99-A37+Z83-R66-A37+E11-Z83-E11-Z83 -26013800
+8 23 =I85-Z33-X38+X38+M3+X38-Z33-M3-M3+M3 5060615
+45 15 =I85-X38+Z33+Z48+X38+Z33+Z48+I85-M3-M3 16777705
+7 3 =I85-Z48+X38+Z48-M3-Z33-M3-I85+Z48-I85 -43169667
+26 17 =I85+I85+Z48-M3-X38+M3+X38-I85+X38+Z48 -11120031
+26 20 =Z48+M3-Z33-Z48-M3+Z33-Z48+M3-I85+I85 -33793417
+45 10 =D8+P46+D8-D8-P46+U27-D8-D8+D8-R27 11483568
+56 13 =X9-R27+U27+P46-R27-X9+X9+D8+X9+P46 -49653452
+75 14 =R27-P46+P46+P46+U27-U27-X9+P46-X9-D8 -96371101
+46 6 =R27+U27+D8+D8+U27+X9+D8+D8+U27-U27 -18383289
+36 14 =D8+X9+X9-R27-R27-X9+U27+U27+X9+U27 -48301254
+54 14 =G47+K46-N57+O76-O37+O76-K46+G47-O37+O76 -11505634
+33 15 =G47+G47-N57+N57-K46+O76-O37-G47-N57+K46 -89180500
+60 10 =K46+K46-O37+K46-O37-N57+K46+K46-O37-G47 -89892493
+80 16 =O37-G47-O76+O76+K46-G47+O37-G47-O76-G47 -69685016
+57 22 =K46+O37+K46-N57+K46-K46+N57-O76+N57-N57 -62331369
+82 2 =P34+Q81-O55-Q81-Q81+W58-W58+W58+W58-O55 -19097644
+11 8 =K61-Q81-P34+P34+P34-W58-O55+P34-K61-O55 -75599726
+49 2 =K61-K61+P34-W58-Q81+K61-P34+O55-K61+W58 -59011583
+8 6 =O55+Q81+O55+O55-W58+P34+O55-Q81-Q81-P34 -39390234
+55 20 =K61+Q81+P34-K61+Q81-W58-P34+O55-K61-P34 -91146462
+39 20 =G9-I12+C83+C83+I12+C50+U56-I12-I12-C83 -50455316
+69 17 =C50+I12-U56+C50-C50-C83+U56-C83-I12+U56 -72090844
+81 2 =C83+G9-C50+U56+G9+I12-U56+I12-I12+C50 -46116503
+57 4 =C83+C83-G9-U56-C83-U56+U56-C50+C50-C83 -13981624
+36 6 =C83+G9-I12-U56-C50+C83-C83+C50+I12+U56 -51126557
+57 11 =R70-R70+E58+G37-E58+C82+R70+E58+G37-C82 -14917065
+92 20 =G37-U40-U40+G37+U40-U40+R70-G37-G37-G37 19210055
+34 12 =R70-C82-E58-G37-G37+R70-E58+R70+G37-R70 22839840
+56 10 =G37-E58+G37+E58-E58-U40+U40-R70-R70-G37 -3168916
+76 21 =R70+E58-U40+R70+C82-G37+R70-E58-U40-U40 -27029657
+25 20 =V77+M35-U93+K57+K57+K57-L58+M35-L58-M35 -31832971
+59 24 =L58-K57-K57-U93-V77+U93-M35-L58+M35+L58 -19745233
+17 3 =U93-U93+M35-K57+V77-M35+L58+V77-L58+K57 32533292
+38 10 =M35+K57-U93-K57-L58+V77+U93+U93+K57-M35 -19418577
+27 17 =M35+L58+L58-K57+V77-K57-L58-U93-U93-V77 4183972
+37 4 =R28-K39-U26+K39+U26-K39+U26+K39-Y60-Y60 -1192269
+11 9 =Y60-U26+Y60-U26-Y60-D18+D18-R28+K39-K39 -3100452
+8 8 =Y60+Y60+U26-Y60+K39-R28+Y60-Y60-Y60-U26 21345137
+54 6 =D18-Y60+K39+D18+U26-K39+D18-R28-K39-Y60 -22448772
+67 25 =U26-Y60-R28-R28+Y60-K39-D18-K39-U26-Y60 -30116395
+91 1 =E38+G55-E38-J12+J12-I9-I9+E38+E38+G55 22652141
+49 6 =I9+E38+E38+G55-J12-Z68-J12-E38-G55+G55 9411569
+75 11 =J12+E38-J12-I9+I9+G55-E38-Z68+Z68+E38 60241426
+4 20 =J12-Z68-Z68-J12+J12-G55+I9-Z68-I9-E38 30506255
+35 10 =E38+Z68-G55-Z68+I9+I9-E38-G55+Z68+I9 -16236797
+</span></pre><h2>样例输出</h2>
+<pre class="content"><span class="sampledata">#1 14
+#2 10
+#3 12
+#4 100
+TotalScore = 136
+</span></pre><h2>提示</h2>
+<div class="content"><p>困难度：★★★★</p></div><center>[<a href="http://109.131.7.129/OJ/submitpage.php?cid=1093&amp;pid=0&amp;langmask=0">提交</a>][<a href="http://109.131.7.129/OJ/problemstatus.php?id=1258">状态</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="./SRCG OJ_files/jquery.min.js.下载"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="./SRCG OJ_files/bootstrap.min.js.下载"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<marquee  id=broadcast scrollamount=3 scrolldelay=30 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"~SRC-G Online Judge\u7cfb\u7edf~ \u8bb2\u5e08\u56e2\u6210\u5458:suxian.zhang(\u6821\u957f);shuyi.luo(\u4e13\u5bb6);junnan.fu(\u7248\u4e3b);jianhui.yan;y2016.liu;yuqing26.wu;hr.z;jx.liang;qyong.liang;tianwei.hong;jiaqi.shao;jian.guan;jida.liu;yiluo.huang;\r\n"+"</marquee>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+});
+
+</script>
+
+	    
+  
+
+<!--not cached-->
+
+<div id="footer" class="center">GPLv2 licensed by <a href="https://github.com/zhblue/hustoj">HUSTOJ</a> 2018 </div></body></html>

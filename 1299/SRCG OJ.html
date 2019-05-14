@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://109.131.7.129/OJ/problem.php?cid=1129&pid=0 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://109.131.7.129/favicon.ico">
+
+    <title>SRCG OJ</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="./SRCG OJ_files/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="./SRCG OJ_files/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./SRCG OJ_files/local.css">
+
+
+
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://109.131.7.129/OJ/">SRCG OJ</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	                    <li><a href="http://109.131.7.129/OJ/bbs.php">讨论版</a></li>
+	      <li><a href="http://109.131.7.129/OJ/faqs.php">常见问答</a></li>
+              <li><a href="http://109.131.7.129/OJ/problemset.php">问题</a></li>
+              <li><a href="http://109.131.7.129/OJ/status.php">状态</a></li>
+              <li><a href="http://109.131.7.129/OJ/ranklist.php">排名</a></li>
+              <li><a href="http://109.131.7.129/OJ/contest.php">竞赛&amp;作业</a></li>
+	      <li><a>[</a></li>
+              <li class="active"><a href="http://109.131.7.129/OJ/contest.php?cid=1129">
+			问题	      </a></li>
+               <li class="active"><a href="http://109.131.7.129/OJ/status.php?cid=1129">
+			状态	      </a></li>
+              <li class="active"><a href="http://109.131.7.129/OJ/contestrank.php?cid=1129">
+			排名	      </a></li>
+              <!--<li  class="active" ><a href="contestrank-oi.php?cid=1129">
+			OI排名	      </a></li>-->
+              <li class="active"><a href="http://109.131.7.129/OJ/conteststatistics.php?cid=1129">
+			统计	      </a></li>
+	      <li><a>]</a></li>
+
+              <!--<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+	-->
+
+            </ul>
+
+	    <ul class="nav navbar-nav navbar-right">
+<li><a href="http://109.131.7.129/OJ/problem.php?cid=1129&amp;pid=0"> 当前时间:<span id="nowdate">2018-10-11 13:19:30</span></a></li>
+	    <li class="dropdown">
+            <a href="http://109.131.7.129/OJ/problem.php?cid=1129&amp;pid=0#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">登录</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="./SRCG OJ_files/profile.php"></script><li><a href="http://109.131.7.129/OJ/loginpage.php">登录</a></li>&nbsp;<li><a href="http://109.131.7.129/OJ/registerpage.php">注册</a></li>&nbsp;
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+<script>
+var diff=new Date("2018/10/11 13:19:02").getTime()-new Date().getTime();
+//alert(diff);
+function clock()
+{
+var x,h,m,s,n,xingqi,y,mon,d;
+var x = new Date(new Date().getTime()+diff);
+y = x.getYear()+1900;
+if (y>3000) y-=1900;
+mon = x.getMonth()+1;
+d = x.getDate();
+xingqi = x.getDay();
+h=x.getHours();
+m=x.getMinutes();
+s=x.getSeconds();
+n=y+"-"+mon+"-"+d+" "+(h>=10?h:"0"+h)+":"+(m>=10?m:"0"+m)+":"+(s>=10?s:"0"+s);
+//alert(n);
+document.getElementById('nowdate').innerHTML=n;
+setTimeout("clock()",1000);
+}
+clock();
+</script>
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron"><marquee id="broadcast" scrollamount="3" scrolldelay="30" onmouseover="this.stop()" onmouseout="this.start()" class="toprow">~SRC-G Online Judge系统~ 讲师团成员:suxian.zhang(校长);shuyi.luo(专家);junnan.fu(版主);jianhui.yan;y2016.liu;yuqing26.wu;hr.z;jx.liang;qyong.liang;tianwei.hong;jiaqi.shao;jian.guan;jida.liu;yiluo.huang;
+</marquee>
+	
+<title>问题 A: 听歌识曲 </title><center><h2>问题 A: 听歌识曲</h2><span class="green">时间限制: </span>10 Sec&nbsp;&nbsp;<span class="green">内存限制: </span>256 MB<br><span class="green">提交: </span>545&nbsp;&nbsp;<span class="green">解决: </span>182<br>[<a href="http://109.131.7.129/OJ/submitpage.php?cid=1129&amp;pid=0&amp;langmask=0">提交</a>][<a href="http://109.131.7.129/OJ/problemstatus.php?id=1299">状态</a>][<a href="http://109.131.7.129/OJ/bbs.php?pid=1299&amp;cid=1129">讨论版</a>]</center><h2>题目描述</h2><div class="content"><span> </span> 
+<p>
+	<span><span style="font-family:宋体;">实现一个程序根据听到的一段歌曲识别出它的名字</span><span><span>.</span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span>&nbsp;</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span style="font-family:宋体;">有两个函数需要去实现</span><span><span>:</span></span></span> 
+</p>
+<span> </span> 
+<ol>
+	<li style="color:#000000;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-style:normal;font-weight:normal;">
+			<span style="font-family:宋体;">保存歌曲的数字信号数据</span> 
+		</p>
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span style="font-family:宋体;">有最多</span><span>10000</span><span style="font-family:宋体;">首歌的数据，每一首歌的长度大于等于</span><span>8</span><span style="font-family:宋体;">且小于等于</span><span>200</span><span style="font-family:宋体;">，每一个数字信号范围是</span><span>-16384</span><span style="font-family:宋体;">到</span><span>16383</span><span style="font-family:宋体;">。</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span style="font-family:宋体;">在所有歌曲数据都保存之后，分析给出的一段信号来自哪一首歌</span> 
+		</p>
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span style="font-family:宋体;">信号长度固定为</span><span>8</span><span style="font-family:宋体;">，信号有噪声影响，所以与原始数据相比会有</span><span>-128</span><span style="font-family:宋体;">到</span><span>127</span><span style="font-family:宋体;">的误差</span> 
+		</p>
+	</li>
+</ol>
+<span> </span> 
+<p>
+	<span><span>&nbsp;</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span style="font-family:宋体;">以下函数名称基于</span><span><span>C/C++</span></span><span style="font-family:宋体;">。对应的</span><span><span>Java</span></span><span style="font-family:宋体;">版本请参考</span><span><span>Solution.java</span></span><span style="font-family:宋体;">和</span><span><span>UserSolution.java</span></span><span style="font-family:宋体;">。</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span style="font-family:宋体;">在</span><span><span>Java</span></span><span style="font-family:宋体;">中，</span><span><span>char</span></span><span style="font-family:宋体;">有</span><span><span>2 byte</span></span><span style="font-family:宋体;">长但是只使用低位。</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span>&nbsp;</span></span> 
+</p>
+<span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span><span> </span> 
+<table style="border:currentColor;border-collapse:collapse;" border="1" cellspacing="0" cellpadding="0">
+	<tbody>
+		<tr>
+			<td width="568" valign="top" style="border:1pt solid windowtext;background-color:transparent;">
+				<span> </span> 
+				<p>
+					<b><span><span style="color:#00B0F0;"><span>void </span></span><span><span>init(<span style="color:#00B0F0;">int</span></span><span> total_music_cnt)</span></span></span></b> 
+				</p>
+<span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="568" valign="top" style="background-color:transparent;">
+				<span> </span> 
+				<p>
+					<span><span style="font-family:宋体;">这个函数在每个</span><span><span>case</span></span><span style="font-family:宋体;">的开始被调用。</span></span> 
+				</p>
+<span> </span> 
+				<p>
+					<span style="font-family:宋体;"><span>参数：</span></span> 
+				</p>
+<span> </span> 
+				<p>
+					<span><span><span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>Total_music_cnt </span></span></span><span><span style="font-family:宋体;">：歌曲的数量</span><span><span> N (5 &lt;= N &lt;= 10000)</span></span></span> 
+				</p>
+<span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="568" valign="top" style="background-color:transparent;">
+				<span> </span> 
+				<p>
+					<b><span><span style="color:#00B0F0;"><span>void </span></span><span><span>send_music_db_data(<span style="color:#00B0F0;">int</span></span><span> music_id, </span><span style="color:#00B0F0;"><span>int</span></span><span> music_len, </span><span style="color:#00B0F0;"><span>int</span></span><span> data[])</span></span></span></b> 
+				</p>
+<span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="568" valign="top" style="background-color:transparent;">
+				<span> </span> 
+				<p>
+					<span style="font-family:宋体;"><span>这个函数传递要注册的歌曲数据。</span></span> 
+				</p>
+<span> </span> 
+				<p>
+					<span><span style="font-family:宋体;">对每一个</span><span><span>case</span></span><span style="font-family:宋体;">，</span><span><span>music_id</span></span><span style="font-family:宋体;">从</span><span><span>1</span></span><span style="font-family:宋体;">开始连续增加。</span></span> 
+				</p>
+<span> </span> 
+				<p>
+					<span style="font-family:宋体;"><span>参数：</span></span> 
+				</p>
+<span> </span> 
+				<p>
+					<span><span><span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>music_id </span></span></span><span><span style="font-family:宋体;">：歌曲的</span><span><span>id (1 &lt;= music_id &lt;= 10000)</span></span></span> 
+				</p>
+<span> </span> 
+				<p>
+					<span><span><span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>music_len </span></span></span><span><span style="font-family:宋体;">：歌曲的长度</span><span><span> (8 &lt;= music_len &lt;= 200)</span></span></span> 
+				</p>
+<span> </span> 
+				<p>
+					<span><span><span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>data[] </span></span></span><span><span style="font-family:宋体;">：歌曲的数字信号</span><span><span> (-16384 &lt;= data[i] &lt;= 16383)</span></span></span> 
+				</p>
+<span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="568" valign="top" style="background-color:transparent;">
+				<span> </span> 
+				<p>
+					<b><span><span style="color:#00B0F0;"><span>void </span></span><span><span>find_music_id(<span style="color:#00B0F0;">int</span></span><span> data[])</span></span></span></b> 
+				</p>
+<span> </span> 
+			</td>
+		</tr>
+		<tr>
+			<td width="568" valign="top" style="background-color:transparent;">
+				<span> </span> 
+				<p>
+					<span style="font-family:宋体;"><span>这个函数传递要查找的歌曲中的一段。</span></span> 
+				</p>
+<span> </span> 
+				<p>
+					<span><span style="font-family:宋体;">每一个数据与原始数据相比都有</span><span><span>-128</span></span><span style="font-family:宋体;">到</span><span><span>127</span></span><span style="font-family:宋体;">的噪声。</span></span> 
+				</p>
+<span> </span> 
+				<p>
+					<span><span style="font-family:宋体;">返回查找到的歌曲的</span><span><span>id</span></span><span style="font-family:宋体;">。</span></span> 
+				</p>
+<span> </span> 
+				<p>
+					<span><span><span>data[]</span></span><span style="font-family:宋体;">的长度固定为</span><span><span>8</span></span><span style="font-family:宋体;">。</span></span> 
+				</p>
+<span> </span> 
+				<p>
+					<span style="font-family:宋体;"><span>参数：</span></span> 
+				</p>
+<span> </span> 
+				<p>
+					<span><span><span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span>data[] </span></span></span><span style="font-family:宋体;"><span>：要查找的数字信号</span></span> 
+				</p>
+<span> </span> 
+				<p>
+					<span style="font-family:宋体;"><span>返回：</span></span> 
+				</p>
+<span> </span> 
+				<p>
+					<span><span><span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-family:宋体;">与该数字信号对应的歌曲</span><span><span>id</span></span></span> 
+				</p>
+<span> </span> 
+			</td>
+		</tr>
+	</tbody>
+</table>
+<span> </span> 
+<p>
+	<span><span>&nbsp;</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><b><span><span>[</span></span></b><b><span style="font-family:宋体;">例</span><span><span>]</span></span></b></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span style="font-family:宋体;">每一个</span><span><span>case</span></span><span style="font-family:宋体;">中</span><span><span>,</span></span><span style="font-family:宋体;">调用</span><span><span>init(N)</span></span><span style="font-family:宋体;">之后会调用</span><span><span>N</span></span><span style="font-family:宋体;">次</span><span><span>send_music_db_data().</span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span><span>[Fig.1]</span></span><span style="font-family:宋体;">表示第一个</span><span><span>case</span></span><span style="font-family:宋体;">的</span><span><span>5</span></span><span style="font-family:宋体;">首歌曲数据</span><span><span>.</span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span><span><img alt="" src="./SRCG OJ_files/20180917141200_71040.png"></span></span></span> 
+</p>
+<p align="center">
+	<span> <span><span><span>Fig. </span><span><span>1</span></span></span></span></span><span> </span> 
+</p>
+<p>
+	<span><span><span>find_music_id()</span></span><span style="font-family:宋体;">函数会被调用</span><span><span>5</span></span><span style="font-family:宋体;">次</span><span><span>.</span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span style="font-family:宋体;">第一段信号来自第</span><span><span>5</span></span><span style="font-family:宋体;">首的第</span><span><span>5</span></span><span style="font-family:宋体;">到第</span><span><span>12</span></span><span style="font-family:宋体;">个信号</span><span><span>.</span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span><span>[Fig.2-1]</span></span><span style="font-family:宋体;">表示第</span><span><span>5</span></span><span style="font-family:宋体;">首的第</span><span><span>5</span></span><span style="font-family:宋体;">到第</span><span><span>12</span></span><span style="font-family:宋体;">个信号和第</span><span><span>1</span></span><span style="font-family:宋体;">段要查找的信号</span><span><span>.</span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<b><span><span style="font-family:宋体;">因为两条曲线几乎重合所以在图中很难区分</span><span><span>.</span></span></span></b> 
+</p>
+<span> </span> 
+<p>
+	<span><span><span><img width="555" height="325" src="./SRCG OJ_files/20180917141218_19180.png"></span></span></span> 
+</p>
+<span> </span> 
+<p align="center" style="text-align:center;">
+	<span><span><span>Fig.2- </span><span><span>1</span></span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span><span><span>&nbsp;</span></span><span>[Fig.2-2]</span></span></span><span><span style="font-family:宋体;">表示第</span><span><span>5</span></span><span style="font-family:宋体;">首的第</span><span><span>5</span></span><span style="font-family:宋体;">到第</span><span><span>12</span></span><span style="font-family:宋体;">个信号和第</span><span><span>1</span></span><span style="font-family:宋体;">段要查找的信号的误差</span><span><span>.</span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span style="font-family:宋体;">误差的值在</span><span><span>-128</span></span><span style="font-family:宋体;">到</span><span><span>127</span></span><span style="font-family:宋体;">的范围内</span><span><span>.</span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span><span><img width="555" height="325" src="./SRCG OJ_files/20180917141228_42114.png"></span></span></span> 
+</p>
+<span> </span> 
+<p align="center" style="text-align:center;">
+	<span><span><span>Fig.2- </span><span><span>2</span></span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span style="font-family:宋体;">得到结果为这段信号是歌曲</span><span><span>5</span></span><span style="font-family:宋体;">的的一部分</span><span><span>, </span></span><span style="font-family:宋体;">所以第</span><span><span>1</span></span><span style="font-family:宋体;">个</span><span><span>find_music_id()</span></span><span style="font-family:宋体;">返回</span><span><span>5.</span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span>&nbsp;</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span style="font-family:宋体;">第</span><span><span>2</span></span><span style="font-family:宋体;">段信号来自第</span><span><span>1</span></span><span style="font-family:宋体;">首歌曲的第</span><span><span>0</span></span><span style="font-family:宋体;">到第</span><span><span>7</span></span><span style="font-family:宋体;">个信号</span><span><span>.</span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span><span>[Fig.3-1]</span></span><span style="font-family:宋体;">是第</span><span><span>1</span></span><span style="font-family:宋体;">首歌曲的第</span><span><span>0</span></span><span style="font-family:宋体;">到第</span><span><span>7</span></span><span style="font-family:宋体;">个信号和第</span><span><span>2</span></span><span style="font-family:宋体;">段要查找的信号</span><span><span>.</span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span><span><img width="555" height="325" src="./SRCG OJ_files/20180917141237_99542.png"></span></span></span> 
+</p>
+<span> </span> 
+<p align="center" style="text-align:center;">
+	<span><span><span>Fig.3- </span><span><span>1</span></span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span><span>[Fig.3-2]</span></span><span style="font-family:宋体;">是这两段信号的误差</span><span><span>.</span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span><span><img width="555" height="325" src="./SRCG OJ_files/20180917141245_86800.png"></span></span></span> 
+</p>
+<span> </span> 
+<p align="center" style="text-align:center;">
+	<span><span><span>Fig.3- </span><span><span>2</span></span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span style="font-family:宋体;">得到结果为这段信号是歌曲</span><span><span>1</span></span><span style="font-family:宋体;">的一部分</span><span><span>, </span></span><span style="font-family:宋体;">所以第</span><span><span>2</span></span><span style="font-family:宋体;">个</span><span><span>find_music_id()</span></span><span style="font-family:宋体;">返回</span><span><span>1.</span></span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><span>&nbsp;</span></span> 
+</p>
+<span> </span> 
+<p>
+	<span><b><span><span>[</span></span></b><b><span style="font-family:宋体;">限制条件</span><span><span>]</span></span></b></span> 
+</p>
+<span> </span> 
+<ol>
+	<li style="color:#000000;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-style:normal;font-weight:normal;">
+			<span style="font-family:宋体;">歌曲的总数</span><span>N</span><span style="font-family:宋体;">小于等于</span><span>10000.</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span style="font-family:宋体;">每首歌曲的长度小于等于</span><span>200.</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span style="font-family:宋体;">原始的歌曲数字信号范围是</span><span>-16384</span><span style="font-family:宋体;">到</span><span>+16383.</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>find_music_id()</span><span style="font-family:宋体;">中的噪声范围是</span><span>-128</span><span style="font-family:宋体;">到</span><span>+127.</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span style="font-family:宋体;">每一个</span><span>case</span><span style="font-family:宋体;">调用</span><span>find_music_id()</span><span style="font-family:宋体;">少于</span><span>10000</span><span style="font-family:宋体;">次</span><span>.</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span>find_music_id()</span><span style="font-family:宋体;">中的歌曲片段长度固定为</span><span>8.</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span style="font-family:宋体;">测试数据确保</span><span>find_music_id()</span><span style="font-family:宋体;">传递的数据能找到对应的原始歌曲</span><span>.</span> 
+		</p>
+	</li>
+	<li style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+		<p style="color:#000000;font-family:&quot;font-size:10.5pt;font-style:normal;font-weight:normal;">
+			<span style="font-family:宋体;">测试数据确保能找到的歌曲是唯一的</span><span>.</span> 
+		</p>
+	</li>
+</ol>
+<span> </span><span> </span> 
+<p>
+	<span><span><br>
+</span></span> 
+</p>
+<span> </span> 
+<p>
+	<b><span><span>[C/C++
+Main Code]</span></span></b> 
+</p>
+<span> </span> 
+<p>
+	<span><span> </span></span> 
+</p><pre class="prettyprint lang-js">#ifndef _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
+#include&lt;stdio.h&gt;
+
+#define MAX_MUSIC_LEN (200)
+#define SAMPLE_DATA_LEN (8)
+
+static int seed, n, max_len, query_cnt;
+static int music_db[10005][MAX_MUSIC_LEN];
+static int music_len[10005];
+
+static int pseudo_rand(void);
+static void make_music_db(void);
+static bool make_sample_with_noise(void);
+
+extern void init(int total_music_cnt);
+extern void send_music_db_data(int music_id, int music_len, int data[MAX_MUSIC_LEN]);
+extern int find_music_id(int data[SAMPLE_DATA_LEN]);
+
+int main()
+{
+	setbuf(stdout, NULL);
+	int tc, total_score = 0;
+
+//	freopen("sample_input.txt", "r", stdin);
+
+	scanf("%d", &amp;tc);
+
+	for (int t = 1; t &lt;= tc; t++)
+	{
+		scanf("%d%d%d%d", &amp;seed, &amp;n, &amp;max_len, &amp;query_cnt);
+
+		int correct_ans_cnt = 0;
+
+		init(n);
+		make_music_db();
+
+		for (int query = 0; query &lt; query_cnt; query++)
+		{
+			if (make_sample_with_noise())
+				correct_ans_cnt++;
+		}
+		if (correct_ans_cnt == query_cnt)
+		{
+			printf("#%d 100\n", t);
+			total_score += 100;
+		}
+		else
+		{
+			printf("#%d 0\n", t);
+		}
+	}
+	printf("Total Score : %d\n", total_score / tc);
+
+	return 0;
+}
+
+static int pseudo_rand(void)
+{
+	seed = seed * 214013 + 2531011;
+	return (seed &gt;&gt; 16) &amp; 0x7FFF;
+}
+
+static void make_music_db()
+{
+	int param[MAX_MUSIC_LEN];
+	int music_len_param;
+	for (int id = 1; id &lt;= n; id++)
+	{
+		music_len_param = music_len[id] = pseudo_rand() % max_len + 1;
+
+		if (music_len[id] &lt; SAMPLE_DATA_LEN)
+			music_len_param = music_len[id] = SAMPLE_DATA_LEN;
+
+		for (int i = 0; i &lt; music_len[id]; i++)
+		{
+			param[i] = music_db[id][i] = pseudo_rand() - 16384;
+		}
+
+		send_music_db_data(id, music_len_param, param);
+	}
+}
+
+static bool make_sample_with_noise()
+{
+	int param[SAMPLE_DATA_LEN];
+
+	int music_id = pseudo_rand() % n + 1;
+	int offset = pseudo_rand() % music_len[music_id];
+
+	if (offset + SAMPLE_DATA_LEN &gt;= music_len[music_id])
+	{
+		offset = music_len[music_id] - SAMPLE_DATA_LEN;
+	}
+
+	for (int i = 0; i &lt; SAMPLE_DATA_LEN; i++)
+	{
+		param[i] = music_db[music_id][i + offset] + pseudo_rand() % 256 - 128;
+	}
+
+
+	int return_val = find_music_id(param);
+
+	return return_val == music_id;
+}</pre>
+&nbsp;
+	<p>
+		<br>
+	</p>
+<span> </span> 
+	<p>
+		<b><span><span>[C/C++
+User Code]</span></span></b> 
+	</p>
+<span> </span> 
+	<p>
+		<span><span>&nbsp; </span></span> 
+</p><pre class="prettyprint lang-js">#define MAX_MUSIC_LEN (200)
+#define SAMPLE_DATA_LEN (8)
+
+void init(int total_music_cnt)
+{
+
+}
+
+void send_music_db_data(int music_id, int music_len, int data[MAX_MUSIC_LEN])
+{
+
+}
+
+int find_music_id(int data[SAMPLE_DATA_LEN])
+{
+	return 0;
+}</pre>
+		<p>
+			<br>
+		</p>
+<span> </span> 
+		<p>
+			<b><span><span>[Java
+Main Code]</span></span></b> 
+		</p>
+<span> </span> 
+		<p>
+			<span><span>&nbsp; </span></span> 
+</p><pre class="prettyprint lang-js">import java.util.Scanner;
+
+class Solution {
+	static final private int MAX_MUSIC_LEN = 200;
+	static final private int SAMPLE_DATA_LEN = 8;
+	private static int seed;
+	private static int n;
+	private static int max_len;
+	private static int query_cnt;
+	private static int music_db[][] = new int[10005][MAX_MUSIC_LEN];
+	private static int music_len[] = new int[10005];
+	
+	private static int total_score;
+
+	private static Scanner sc;
+	private static UserSolution user = new UserSolution();
+
+	public static void main(String[] args) throws Exception {
+//		System.setIn(new java.io.FileInputStream("sample_input.txt"));
+		
+		sc = new Scanner(System.in);
+
+		int TC = sc.nextInt();
+		total_score = 0;
+
+		for (int t = 1; t &lt;= TC; t++) {
+			seed = sc.nextInt();
+			n = sc.nextInt();
+			max_len = sc.nextInt();
+			query_cnt = sc.nextInt();
+
+			int correct_ans_cnt = 0;
+
+			user.init(n);
+			make_music_db();
+
+			for (int query = 0; query &lt; query_cnt; query++)
+			{
+				if (make_sample_with_noise())
+					correct_ans_cnt++;
+			}
+			if (correct_ans_cnt == query_cnt)
+			{
+				System.out.println("#"+t+" 100");
+				total_score += 100;
+			}
+			else
+			{
+				System.out.println("#"+t+" 0");
+			}
+		}
+
+		System.out.println("Total Score = " + total_score/TC);
+		sc.close();
+	}
+
+	private static int pseudo_rand()
+	{
+		seed = seed * 214013 + 2531011;
+		return (seed &gt;&gt; 16) &amp; 0x7FFF;
+	}
+	
+	private static void make_music_db()
+	{
+		int param[] = new int[MAX_MUSIC_LEN];
+		int music_len_param;
+		for (int id = 1; id &lt;= n; id++)
+		{
+			music_len_param = music_len[id] = pseudo_rand() % max_len + 1;
+
+			if (music_len[id] &lt; SAMPLE_DATA_LEN)
+				music_len_param = music_len[id] = SAMPLE_DATA_LEN;
+
+			for (int i = 0; i &lt; music_len[id]; i++)
+			{
+				param[i] = music_db[id][i] = pseudo_rand() - 16384;
+			}
+
+			user.send_music_db_data(id, music_len_param, param);
+		}
+	}
+	
+	private static boolean make_sample_with_noise()
+	{
+		int param[] = new int[SAMPLE_DATA_LEN];
+
+		int music_id = pseudo_rand() % n + 1;
+		int offset = pseudo_rand() % music_len[music_id];
+
+		if (offset + SAMPLE_DATA_LEN &gt;= music_len[music_id])
+		{
+			offset = music_len[music_id] - SAMPLE_DATA_LEN;
+		}
+
+		for (int i = 0; i &lt; SAMPLE_DATA_LEN; i++)
+		{
+			param[i] = music_db[music_id][i + offset] + pseudo_rand() % 256 - 128;
+		}
+
+
+		int return_val = user.find_music_id(param);
+
+		return return_val == music_id;
+	}
+}</pre>
+			<p>
+				<br>
+			</p>
+<span> </span> 
+			<p>
+				<b><span><span>[Java
+User Code]</span></span></b> 
+			</p>
+<span> </span> 
+			<p>
+				<span><span>&nbsp; </span></span> 
+</p><pre class="prettyprint lang-js">class UserSolution {
+	static final int MAX_MUSIC_LEN = 200;
+	static final int SAMPLE_DATA_LEN = 8;
+	public void init(int total_music_cnt)
+	{
+			
+	}
+
+	public void send_music_db_data(int music_id, int music_len, int data[])
+	{
+
+	}
+	
+	public int find_music_id(int data[])
+	{
+		return 0;
+	}
+}</pre>
+				<p>
+					<br>
+				</p>
+<span> </span><br></div><h2>输入</h2><div class="content"></div><h2>输出</h2><div class="content"></div><h2>样例输入</h2>
+<pre class="content"><span class="sampledata">5
+999	5	20	5
+877	100	50	10
+7692	500	80	50
+21231	2000	100	100
+7767	5000	200	800</span></pre><h2>样例输出</h2>
+<pre class="content"><span class="sampledata">#1 100
+#2 100
+#3 100
+#4 100
+#5 100
+Total Score : 100
+</span></pre><h2>提示</h2>
+<div class="content"><p></p></div><center>[<a href="http://109.131.7.129/OJ/submitpage.php?cid=1129&amp;pid=0&amp;langmask=0">提交</a>][<a href="http://109.131.7.129/OJ/problemstatus.php?id=1299">状态</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="./SRCG OJ_files/jquery.min.js.下载"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="./SRCG OJ_files/bootstrap.min.js.下载"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<marquee  id=broadcast scrollamount=3 scrolldelay=30 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"~SRC-G Online Judge\u7cfb\u7edf~ \u8bb2\u5e08\u56e2\u6210\u5458:suxian.zhang(\u6821\u957f);shuyi.luo(\u4e13\u5bb6);junnan.fu(\u7248\u4e3b);jianhui.yan;y2016.liu;yuqing26.wu;hr.z;jx.liang;qyong.liang;tianwei.hong;jiaqi.shao;jian.guan;jida.liu;yiluo.huang;\r\n"+"</marquee>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+});
+
+</script>
+
+	    
+  
+
+<!--not cached-->
+
+<div id="footer" class="center">GPLv2 licensed by <a href="https://github.com/zhblue/hustoj">HUSTOJ</a> 2018 </div></body></html>

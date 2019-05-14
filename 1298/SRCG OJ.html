@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://109.131.7.129/OJ/problem.php?cid=1122&pid=0 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://109.131.7.129/favicon.ico">
+
+    <title>SRCG OJ</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="./SRCG OJ_files/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="./SRCG OJ_files/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./SRCG OJ_files/local.css">
+
+
+
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://109.131.7.129/OJ/">SRCG OJ</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	                    <li><a href="http://109.131.7.129/OJ/bbs.php">讨论版</a></li>
+	      <li><a href="http://109.131.7.129/OJ/faqs.php">常见问答</a></li>
+              <li><a href="http://109.131.7.129/OJ/problemset.php">问题</a></li>
+              <li><a href="http://109.131.7.129/OJ/status.php">状态</a></li>
+              <li><a href="http://109.131.7.129/OJ/ranklist.php">排名</a></li>
+              <li><a href="http://109.131.7.129/OJ/contest.php">竞赛&amp;作业</a></li>
+	      <li><a>[</a></li>
+              <li class="active"><a href="http://109.131.7.129/OJ/contest.php?cid=1122">
+			问题	      </a></li>
+               <li class="active"><a href="http://109.131.7.129/OJ/status.php?cid=1122">
+			状态	      </a></li>
+              <li class="active"><a href="http://109.131.7.129/OJ/contestrank.php?cid=1122">
+			排名	      </a></li>
+              <!--<li  class="active" ><a href="contestrank-oi.php?cid=1122">
+			OI排名	      </a></li>-->
+              <li class="active"><a href="http://109.131.7.129/OJ/conteststatistics.php?cid=1122">
+			统计	      </a></li>
+	      <li><a>]</a></li>
+
+              <!--<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+	-->
+
+            </ul>
+
+	    <ul class="nav navbar-nav navbar-right">
+<li><a href="http://109.131.7.129/OJ/problem.php?cid=1122&amp;pid=0"> 当前时间:<span id="nowdate">2018-9-22 17:28:41</span></a></li>
+	    <li class="dropdown">
+            <a href="http://109.131.7.129/OJ/problem.php?cid=1122&amp;pid=0#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">登录</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="./SRCG OJ_files/profile.php"></script><li><a href="http://109.131.7.129/OJ/loginpage.php">登录</a></li>&nbsp;<li><a href="http://109.131.7.129/OJ/registerpage.php">注册</a></li>&nbsp;
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+<script>
+var diff=new Date("2018/09/22 17:28:38").getTime()-new Date().getTime();
+//alert(diff);
+function clock()
+{
+var x,h,m,s,n,xingqi,y,mon,d;
+var x = new Date(new Date().getTime()+diff);
+y = x.getYear()+1900;
+if (y>3000) y-=1900;
+mon = x.getMonth()+1;
+d = x.getDate();
+xingqi = x.getDay();
+h=x.getHours();
+m=x.getMinutes();
+s=x.getSeconds();
+n=y+"-"+mon+"-"+d+" "+(h>=10?h:"0"+h)+":"+(m>=10?m:"0"+m)+":"+(s>=10?s:"0"+s);
+//alert(n);
+document.getElementById('nowdate').innerHTML=n;
+setTimeout("clock()",1000);
+}
+clock();
+</script>
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron"><marquee id="broadcast" scrollamount="3" scrolldelay="30" onmouseover="this.stop()" onmouseout="this.start()" class="toprow">~SRC-G Online Judge系统~ 讲师团成员:suxian.zhang(校长);shuyi.luo(专家);junnan.fu(版主);jianhui.yan;y2016.liu;yuqing26.wu;hr.z;jx.liang;qyong.liang;tianwei.hong;jiaqi.shao;jian.guan;jida.liu;yiluo.huang;
+</marquee>
+	
+<title>问题 A: ★Typo Correction System </title><center><h2>问题 A: ★Typo Correction System</h2><span class="green">时间限制: </span>10 Sec&nbsp;&nbsp;<span class="green">内存限制: </span>256 MB<br><span class="green">提交: </span>229&nbsp;&nbsp;<span class="green">解决: </span>120<br>[<a href="http://109.131.7.129/OJ/submitpage.php?cid=1122&amp;pid=0&amp;langmask=0">提交</a>][<a href="http://109.131.7.129/OJ/problemstatus.php?id=1298">状态</a>][<a href="http://109.131.7.129/OJ/bbs.php?pid=1298&amp;cid=1122">讨论版</a>]</center><h2>题目描述</h2><div class="content"><p>
+	<span style="font-size:14px;">In many search engines,they provide a function that show the corrrected word when the user inputs a typo as shown in </span><strong><span style="font-size:14px;">[Fig.1]</span></strong> 
+</p>
+<img alt="" src="./SRCG OJ_files/20180908143354_16384.png"> 
+<p>
+	<span style="font-size:14px;">Typo Correction System updates the Typo Correction DB and returns the results in real time based the user's search info.</span> 
+</p>
+<p>
+	<span style="font-size:14px;"></span>
+</p>
+<p>
+	<u><span style="font-size:14px;">The users of the system will attempt to search within 10s,if they think that they have searched a typo.</span></u> 
+</p>
+<p>
+	<span style="font-size:14px;">If the re-searched word within 10s corresponds to the type of typo defined in this system,it can be registered in the Typo Correction.</span> 
+</p>
+<p>
+	<span style="font-size:14px;">This system defines the type if typo as shown in </span><strong><span style="font-size:14px;">[Table 1] </span></strong><span style="font-size:14px;">below.</span><span style="font-size:14px;">&nbsp;</span><span style="font-size:14px;">&nbsp;</span> 
+</p>
+<p>
+	<span style="font-size:14px;">&nbsp;</span> <img alt="" src="./SRCG OJ_files/20180912143654_93798.png"> 
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size:14px;">[Table 1] </span></strong>
+</p>
+<p>
+	<u><span style="font-size:14px;">The word can be registered only when it applies to just one of three Addition,Substitution,Deletion which are defined in </span><strong><span style="font-size:14px;">[Table 1].</span></strong></u><br>
+<span style="font-size:14px;">The word can't be registered if two ot three cases of the above overlaps.</span><br>
+<u><span style="font-size:14px;"></span></u>
+</p>
+<p>
+	<u><span style="font-size:14px;">If the same typo,correction set appears on 3 different users,then register the word to Typo Correction DB.</span></u> 
+</p>
+<p>
+	<span style="font-size:14px;">After that,if a word that is registered in the Typo Correction DB is searched the corrected is returned.</span> 
+</p>
+<p>
+	<span style="font-size:14px;">There may be two or more correct word for one typo.</span><br>
+<span style="font-size:14px;">eg.geometri(typo) - geometry(correct word), geometri(typo) - geometric(correct word)</span> 
+</p>
+<p>
+	<span style="font-size:14px;"></span>&nbsp;
+</p>
+<p>
+	<span style="font-size:14px;">Implement a Typo Correction System that operates as described in the above.</span> 
+</p>
+<p>
+	<span style="color:#e53333;"><strong><span style="font-size:14px;"></span></strong></span>&nbsp;
+</p>
+<p>
+	<span style="color:#e53333;"><strong><span style="font-size:14px;">The </span></strong><strong><span style="font-size:14px;">following&nbsp;</span></strong><strong><span style="font-size:14px;">are the APIs</span></strong></span><span style="font-size:14px;color:#e53333;"><strong> to be implemented</strong></span><span style="font-size:14px;color:#e53333;"><strong>.</strong></span><br>
+<span style="font-size:14px;"># In terms of Java,char is in 2 byte representation,</span><strong><span style="font-size:14px;color:#e53333;">but only uses the low byte.</span></strong> 
+</p>
+<p>
+	</p><table style="width:50%;" bordercolor="#000000" cellspacing="0" cellpadding="2" border="1">
+		<tbody>
+			<tr>
+				<td>
+					<span style="font-size:14px;"><strong>void init(int N)</strong></span> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span style="font-size:14px;">This function is called once at the beginning of each test case for initialization.</span> 
+					<p>
+						<strong><span style="font-size:14px;">Parameters</span></strong><br>
+<span style="font-size:14px;">N:the user number (5 &lt;= N &lt;= 2000)</span> 
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<strong><span style="font-size:14px;">int search(int mId, int searchTimestamp, char searchWord[11], char correctWord[5][11])</span></strong> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span style="font-size:14px;">User of mId searches at searchTimestamp time with searchWord.</span><br>
+<span style="font-size:14px;">If the typo is corrected,the correct word is substituted and returned to correctWord.</span> 
+					<p>
+						<strong><span style="font-size:14px;">Parameters</span></strong><br>
+<span style="font-size:14px;">&nbsp; mId:id of the search user(1 &lt;= mId &lt;= N)</span><br>
+<span style="font-size:14px;">&nbsp; searchTimestamp:search time.Unit is seconds(1 &lt;= searchTimestamp &lt;= 50000)</span><br>
+<span style="font-size:14px;">&nbsp; searchword[11]:search word(4 &lt;= length of the word &lt;= 10)</span><br>
+<span style="font-size:14px;">&nbsp; correctWord[5][11]:corrected word(4 &lt;= length of the word &lt;= 10)</span><br>
+<strong><span style="font-size:14px;">Return</span></strong><br>
+<span style="font-size:14px;">&nbsp; Return the number of corrected words.</span> 
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+<p></p>
+<p>
+	<span style="font-size:14px;"></span>&nbsp;
+</p>
+<p>
+	<span style="font-size:14px;"><img alt="" src="./SRCG OJ_files/20180912144543_83100.png">&nbsp;</span><span style="font-size:14px;">&nbsp;</span> 
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<strong><span style="font-size:14px;">[Table 2]</span></strong> 
+</p>
+<p>
+	<span style="font-size:14px;">Since the users in Order 1~4 doesn't have a record of a search within 10s,and the searched word doesn't exist in the Typo Correction DB,0 is returned.</span> 
+</p>
+<p>
+	<span style="font-size:14px;"></span>&nbsp;
+</p>
+<p>
+	<span style="font-size:14px;">In order 5,the second user made a search request at 6s and since the previous search was at 4s,which is within 10s,the two words should be compared.</span> 
+</p>
+<p>
+	<span style="font-size:14px;">The word searched at 4s was gallaxy, and the word searched at 6s was galaxy, and since this is an Addition Typo type,this word pair can be registered </span><br>
+<span style="font-size:14px;">in the Typo Correction DB.</span> 
+</p>
+<p>
+	<span style="font-size:14px;">The candidates that can be registered in the Typo Correction DB are shown in </span><strong><span style="font-size:14px;">[Table 3].</span></strong> 
+</p>
+<p>
+	&nbsp;<img alt="" src="./SRCG OJ_files/20180912145029_76278.png"> 
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<strong><span style="font-size:14px;">[Table 3]</span></strong> 
+</p>
+<p>
+	<span style="font-size:14px;">In Order 6,first user made a search request at 7s,and since the previous search was at 1s,which is within 10s,the two words should be compared.</span> 
+</p>
+<p>
+	<span style="font-size:14px;">The word searched at 1s was galacy, and the word searched at 7s was galaxy, and since this is an Substitution Typo type,this word pair can be registered </span><br>
+<span style="font-size:14px;">in the Typo Correction DB.</span> 
+</p>
+<p>
+	<span style="font-size:14px;">The candidates that can be registered in the Typo Correction DB are shown in </span><strong><span style="font-size:14px;">[Table 4].</span></strong> 
+</p>
+<p>
+	<img alt="" src="./SRCG OJ_files/20180912145223_23508.png"><strong><span style="font-size:14px;"></span></strong>&nbsp;
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="font-size:14px;">[Table 4]</span></strong> 
+</p>
+<p>
+	<span style="font-size:14px;">In order 7,the fourth user made a search request at 9s, and since the previous search was at 3s,which is within 10s,the two words should be compared.</span> 
+</p>
+<p>
+	<span style="font-size:14px;">The word searched at 3s was glacy, and the word searched at 9s was galaxy, and since it doesn't satisfy the Typo type in<strong> [Table 1]</strong>. It can't be registered </span><br>
+<span style="font-size:14px;">in the Typo Correction DB.</span> 
+</p>
+<p>
+	<span style="font-size:14px;"></span>&nbsp;
+</p>
+<p>
+	<span style="font-size:14px;">Since the users in Order 8~9 doesn't have a record of a search within 10s,and the searched word doesn't exist in the Typo Correction DB,0 is returned.</span> 
+</p>
+<p>
+	<span style="font-size:14px;"></span>&nbsp;
+</p>
+<p>
+	<span style="font-size:14px;">In Order 10,the third user made a search request at 16s,and since the previous search was at 12s,which is within 10s,the two words should be compared.</span> 
+</p>
+<p>
+	<span style="font-size:14px;">The word searched at 12s was glaxy, and the word searched at 16s was galaxy, and since this is an Deletion Typo type,this word pair can be registered </span><br>
+<span style="font-size:14px;">in the Typo Correction DB.</span> 
+</p>
+<p>
+	<span style="font-size:14px;">The candidates that can be registered in the Typo Correction DB are shown in </span><strong><span style="font-size:14px;">[</span></strong><strong><span style="font-size:14px;">Table 5].</span></strong> 
+</p>
+<p>
+	&nbsp;<img alt="" src="./SRCG OJ_files/20180912145430_10250.png"> 
+</p>
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="font-size:14px;">[</span></strong><strong><span style="font-size:14px;">Table 5]</span></strong> 
+</p>
+<p>
+	<span style="font-size:14px;">Since the users in Order 11~13 doesn't have a record of a search within 10s,and the searched word doesn't exist in the Typo Correction DB.0 is returned.</span> 
+</p>
+<p>
+	<span style="font-size:14px;"></span>
+</p>
+<p>
+	<span style="font-size:14px;">In Order 14,first user made a search request at 30s,and since the previous search was at 23s,which is within 10s,the two words should be compared.</span> 
+</p>
+<p>
+	<span style="font-size:14px;">The word searched at 23s was galacy, and the word searched at 30s was galaxy, and since this is an Substitution Typo type,this word pair can be registered </span><br>
+<span style="font-size:14px;">in the Typo Correction DB.</span> 
+</p>
+<p>
+	<span style="font-size:14px;"></span>&nbsp;
+</p>
+<p>
+	<span style="font-size:14px;">However,since there is a record of the first user entering galacy-galaxy pair as a typo,there isn't any change in </span><strong><span style="font-size:14px;">[Table 5].</span></strong> 
+</p>
+<p>
+	<span style="font-size:14px;"></span>&nbsp;
+</p>
+<p>
+	<span style="font-size:14px;">In Order 15,second user made a search request at 31s,and since the previous search was at 26s,which is within 10s,the two words should be compared.</span> 
+</p>
+<p>
+	<span style="font-size:14px;">The word searched at 26s was galacy, and the word searched at 31s was galaxy, and since this is an Substitution Typo type,this word pair can be registered </span><br>
+<span style="font-size:14px;">in the Typo Correction DB.</span> 
+</p>
+<p>
+	<span style="font-size:14px;">The candidates that can be registered in the Typo Correction DB are shown in </span><strong><span style="font-size:14px;">[Table 6].</span></strong> 
+</p>
+<img alt="" src="./SRCG OJ_files/20180912145550_69316.png"> 
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="font-size:14px;">[Table 6]</span></strong> 
+</p>
+<p>
+	<span style="font-size:14px;">In Order 16,the fourth user made a search request at 34s,and since the previous search was at 24s,which is within 10s,the two words should be compared.</span> 
+</p>
+<p>
+	<span style="font-size:14px;">The word searched at 24s was galacy, and the word searched at 34s was galaxy, and since this is an Substitution Typo type,this word pair can be registered </span><br>
+<span style="font-size:14px;">in the Typo Correction DB.</span> 
+</p>
+<p>
+	<span style="font-size:14px;">The candidates that can be registered in the Typo Correction DB are shown in</span><strong><span style="font-size:14px;"> [Table 7].</span></strong> 
+</p>
+<img alt="" src="./SRCG OJ_files/20180912145734_30595.png"> 
+<p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:14px;">&nbsp;</span><strong><span style="font-size:14px;">[Table 7]</span></strong> 
+</p>
+<p>
+	<span style="font-size:14px;">In Order 17,third user made a request at 35s and since there is no record of a search within 10s so typo search is not done.</span> <br>
+<span style="font-size:14px;">Since there is word galacy in the Typo Correction DB,the correct word galaxy and 1 is returned.</span> 
+</p>
+<p>
+	<span style="font-size:14px;"><br>
+</span>
+</p>
+<p>
+	<span style="font-size:14px;"></span>
+</p>
+<p>
+	<strong><span style="font-size:14px;">[Constraints]</span></strong><br>
+<span style="font-size:14px;">&nbsp;&nbsp;1.The user number, N, is an integer greater than or equal to 5 and less than or equal to 2000.(5 &lt;= N &lt;= 2000)</span><br>
+<span style="font-size:14px;">&nbsp;&nbsp;2.the number of words searched per test case is less than 4000,including typos.</span><br>
+<span style="font-size:14px;">&nbsp; 3.It is guaranteed that one user does not search more than three times in 20s.</span><br>
+<span style="font-size:14px;">&nbsp; 4.It is guaranteed that there will be less than or equal to five correct words for one typo.</span><br>
+<span style="font-size:14px;">&nbsp; 5.The searchWord in search function consists only of lowercase alphabet characters,and the length is 4 or more and 10 or less.</span><br>
+<span style="font-size:14px;">&nbsp; 6.The search function is called in the increasing order of searchTimestamp,and searchTimestamp is not overlapped.</span><br>
+<span style="font-size:14px;">&nbsp; 7.The search call count is less than or equal to 50000.</span> 
+</p>
+<p>
+	<span style="font-size:14px;"><br>
+</span>
+</p>
+<p>
+	<span style="font-size:14px;"></span>
+</p>
+<p>
+	<span style="font-size:14px;"><strong>[C++]</strong></span> <span style="font-size:14px;">&nbsp;</span> 
+</p>
+<p>
+	<span style="font-size:14px;"></span><span style="font-size:14px;"><a class="ke-insertfile" href="http://109.131.7.129/OJ/upload/file/20180908/20180908155611_87204.txt" target="_blank"><span style="font-size:14px;">Project_cpp.cpp</span></a></span> 
+</p>
+<p>
+	<span style="font-size:14px;"><strong>[java]</strong></span> 
+</p>
+<p>
+	<a class="ke-insertfile" href="http://109.131.7.129/OJ/upload/file/20180908/20180908155624_85401.txt" target="_blank"><span style="font-size:14px;">Project_java.java</span></a> 
+</p>
+<p>
+	<span style="font-size:14px;">&nbsp;</span> 
+</p></div><h2>输入</h2><div class="content"><p>
+	<a class="ke-insertfile" href="http://109.131.7.129/OJ/upload/file/20180908/20180908152655_46688.txt" target="_blank">sample_input.txt</a><span style="font-size:14px;"></span> 
+</p></div><h2>输出</h2><div class="content"><p>
+	<span style="font-size:14px;">#1 100</span> 
+</p>
+<p>
+	<span style="font-size:14px;">#2 100</span> 
+</p>
+<p>
+	<span style="font-size:14px;">#3 100</span> 
+</p>
+<p>
+	<span style="font-size:14px;">#4 100</span> 
+</p>
+<p>
+	<span style="font-size:14px;">#5 100</span> 
+</p>
+<p>
+	&nbsp;
+</p></div><h2>样例输入</h2>
+<pre class="content"><span class="sampledata">2
+5
+galacy
+galaxy
+gallaxy
+glacy
+glaxy
+5 17
+1 1 0
+0 
+5 2 0
+0 
+4 3 3
+0 
+2 4 2
+0 
+2 6 1
+0 
+1 7 1
+0 
+4 9 1
+0 
+3 12 4
+0 
+5 14 1
+0 
+3 16 1
+0 
+1 23 0
+0 
+4 24 0
+0 
+2 26 0
+0 
+1 30 1
+0 
+2 31 1
+0 
+4 34 1
+0 
+3 35 0
+1 galaxy 
+15
+bhjrge
+chaarge
+chaqge
+charge
+chjrege
+chjrge
+cnjrge
+cwjrge
+flighe
+flight
+flighvt
+hcharge
+hchargt
+kflighvt
+qhjrge
+10 118
+3 12 9
+0 
+3 18 9
+0 
+10 26 3
+0 
+3 39 9
+0 
+7 43 9
+0 
+4 47 3
+0 
+10 48 11
+0 
+10 58 3
+0 
+1 61 3
+0 
+3 62 3
+0 
+2 64 3
+0 
+7 65 3
+0 
+4 66 8
+0 
+6 71 2
+0 
+4 73 9
+0 
+5 75 9
+0 
+6 78 3
+0 
+10 79 8
+0 
+1 82 2
+0 
+2 83 11
+0 
+3 84 11
+0 
+10 85 9
+0 
+2 86 3
+0 
+1 87 3
+0 
+3 88 3
+0 
+7 89 1
+0 
+8 90 3
+0 
+9 91 9
+0 
+4 94 3
+0 
+5 95 11
+1 charge 
+6 98 3
+0 
+7 99 3
+0 
+5 100 3
+0 
+9 101 9
+0 
+2 104 5
+0 
+1 105 9
+0 
+3 106 2
+0 
+10 107 11
+1 charge 
+8 108 3
+0 
+2 110 3
+0 
+10 112 3
+0 
+4 114 10
+0 
+3 116 3
+0 
+6 117 3
+0 
+5 118 10
+0 
+7 119 8
+0 
+9 120 10
+0 
+4 121 9
+0 
+5 122 9
+0 
+1 125 6
+0 
+8 126 9
+0 
+7 127 9
+0 
+1 128 3
+0 
+2 129 3
+0 
+9 130 9
+0 
+10 131 3
+0 
+8 134 9
+0 
+3 135 2
+1 charge 
+6 136 1
+0 
+3 139 3
+0 
+5 141 3
+0 
+4 142 9
+0 
+6 143 3
+0 
+7 146 3
+0 
+2 147 8
+1 flight 
+1 148 9
+0 
+10 149 9
+0 
+4 150 9
+0 
+2 151 9
+0 
+9 152 10
+1 flight 
+8 153 3
+0 
+9 158 9
+0 
+5 159 1
+0 
+3 161 0
+0 
+6 162 9
+0 
+5 163 3
+0 
+3 165 3
+0 
+6 166 9
+0 
+7 167 11
+1 charge 
+4 168 3
+0 
+2 169 1
+1 charge 
+1 170 3
+0 
+10 171 9
+0 
+7 173 3
+0 
+2 175 3
+0 
+8 176 9
+0 
+9 177 2
+1 charge 
+8 181 9
+0 
+5 184 3
+0 
+3 185 1
+1 charge 
+6 186 10
+1 flight 
+9 187 3
+0 
+1 189 3
+0 
+4 190 9
+0 
+10 192 14
+0 
+3 194 3
+0 
+6 195 9
+0 
+7 196 3
+0 
+2 197 9
+0 
+8 200 5
+0 
+10 201 3
+0 
+5 202 3
+0 
+8 206 3
+0 
+9 207 1
+1 charge 
+6 213 7
+0 
+9 214 3
+0 
+2 215 3
+0 
+6 217 3
+0 
+8 227 12
+0 
+8 232 3
+0 
+6 235 13
+0 
+9 236 5
+0 
+6 238 9
+0 
+9 241 3
+0 
+9 261 4
+0 
+9 265 3
+0 
+9 286 1
+1 charge 
+9 294 3
+0 </span></pre><h2>样例输出</h2>
+<pre class="content"><span class="sampledata">#1 100 
+#2 100 </span></pre><h2>提示</h2>
+<div class="content"><p>pro</p></div><center>[<a href="http://109.131.7.129/OJ/submitpage.php?cid=1122&amp;pid=0&amp;langmask=0">提交</a>][<a href="http://109.131.7.129/OJ/problemstatus.php?id=1298">状态</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="./SRCG OJ_files/jquery.min.js.下载"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="./SRCG OJ_files/bootstrap.min.js.下载"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<marquee  id=broadcast scrollamount=3 scrolldelay=30 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"~SRC-G Online Judge\u7cfb\u7edf~ \u8bb2\u5e08\u56e2\u6210\u5458:suxian.zhang(\u6821\u957f);shuyi.luo(\u4e13\u5bb6);junnan.fu(\u7248\u4e3b);jianhui.yan;y2016.liu;yuqing26.wu;hr.z;jx.liang;qyong.liang;tianwei.hong;jiaqi.shao;jian.guan;jida.liu;yiluo.huang;\r\n"+"</marquee>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+});
+
+</script>
+
+	    
+  
+
+<!--not cached-->
+
+<div id="footer" class="center">GPLv2 licensed by <a href="https://github.com/zhblue/hustoj">HUSTOJ</a> 2018 </div></body></html>

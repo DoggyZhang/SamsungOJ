@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://109.131.7.129/OJ/problem.php?cid=1048&pid=0 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://109.131.7.129/favicon.ico">
+
+    <title>SRCG OJ</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="./SRCG OJ_files/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="./SRCG OJ_files/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./SRCG OJ_files/local.css">
+
+
+
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://109.131.7.129/OJ/">SRCG OJ</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	                    <li><a href="http://109.131.7.129/OJ/bbs.php">讨论版</a></li>
+	      <li><a href="http://109.131.7.129/OJ/faqs.php">常见问答</a></li>
+              <li><a href="http://109.131.7.129/OJ/problemset.php">问题</a></li>
+              <li><a href="http://109.131.7.129/OJ/status.php">状态</a></li>
+              <li><a href="http://109.131.7.129/OJ/ranklist.php">排名</a></li>
+              <li><a href="http://109.131.7.129/OJ/contest.php">竞赛&amp;作业</a></li>
+	      <li><a>[</a></li>
+              <li class="active"><a href="http://109.131.7.129/OJ/contest.php?cid=1048">
+			问题	      </a></li>
+               <li class="active"><a href="http://109.131.7.129/OJ/status.php?cid=1048">
+			状态	      </a></li>
+              <li class="active"><a href="http://109.131.7.129/OJ/contestrank.php?cid=1048">
+			排名	      </a></li>
+              <!--<li  class="active" ><a href="contestrank-oi.php?cid=1048">
+			OI排名	      </a></li>-->
+              <li class="active"><a href="http://109.131.7.129/OJ/conteststatistics.php?cid=1048">
+			统计	      </a></li>
+	      <li><a>]</a></li>
+              <!--<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+	-->
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="http://109.131.7.129/OJ/problem.php?cid=1048&amp;pid=0#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">登录</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="./SRCG OJ_files/profile.php"></script><li><a href="http://109.131.7.129/OJ/loginpage.php">登录</a></li>&nbsp;<li><a href="http://109.131.7.129/OJ/registerpage.php">注册</a></li>&nbsp;
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron"><marquee id="broadcast" scrollamount="3" scrolldelay="30" onmouseover="this.stop()" onmouseout="this.start()" class="toprow">~SRC-G Online Judge系统~ 讲师团成员:suxian.zhang(校长);shuyi.luo(专家);junnan.fu(版主);jianhui.yan;y2016.liu;haoran.lv;yuqing26.wu;hr.z;jx.liang;qyong.liang;tianwei.hong;qu.xiong;jiaqi.shao;jian.guan;yiluo.huang;
+</marquee>
+	
+<title>问题 A: ★ LUCY研究新型材料 </title><center><h2>问题 A: ★ LUCY研究新型材料</h2><span class="green">时间限制: </span>10 Sec&nbsp;&nbsp;<span class="green">内存限制: </span>256 MB<br><span class="green">提交: </span>365&nbsp;&nbsp;<span class="green">解决: </span>184<br>[<a href="http://109.131.7.129/OJ/submitpage.php?cid=1048&amp;pid=0&amp;langmask=262141">提交</a>][<a href="http://109.131.7.129/OJ/problemstatus.php?id=1271">状态</a>][<a href="http://109.131.7.129/OJ/bbs.php?pid=1271&amp;cid=1048">讨论版</a>]</center><h2>题目描述</h2><div class="content"><table style="width:100%;" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<strong><span style="font-size:16px;">注意</span></strong><br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				1. This test supports C++ only. <br>
+2.&nbsp;None of the header files can be added to the User Code.<br>
+&nbsp;&nbsp;&nbsp; (malloc.h cannot be added either，but malloc can be called)<br>
+3. The Main cannot be modified and is used as is even when being graded.<br>
+4. This certification Test conducts an exhausive review of code.<br>
+&nbsp;&nbsp;&nbsp; Under any circustances, you should neither save nor try to directly access the original data.<br>
+5. Please check the main code for more info. <br>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<span style="font-size:16px;"> Lucy发现了一种新的复杂有机化合物材料，她需要一个在有机化合物材料数据库中搜索相似的复杂有机化合物的方法<br>
+一个复杂有机化合物材料由五个有机化合物组成，分别为第一有机化合物，第二有机化合物，第三有机化合物，第四有机化合物和第五有机化合物。<br>
+为了找到相似的复杂有机化合物材料，我们首先需要计算出每两个复杂有机化合物材料之间的相似度。<br>
+两个复杂有机化合物材料CC1 和CC2（如下表所示）之间，存在着五个相似度:<br>
+1) CC1和CC2的第一有机化合物的相似度<br>
+2) CC1和CC2的第二有机化合物的相似度<br>
+3) CC1和CC2的第三有机化合物的相似度<br>
+4) CC1和CC2的第四有机化合物的相似度<br>
+5) CC1和CC2的第五有机化合物的相似度<br>
+</span> 
+<table style="width:100%;" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<br>
+			</td>
+			<td>
+				CC1<br>
+			</td>
+			<td>
+				CC2<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				第一有机化合物<br>
+			</td>
+			<td>
+				"abvfd"<br>
+			</td>
+			<td>
+				"abvfd"<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				第二有机化合物<br>
+			</td>
+			<td>
+				"gjbnkfkd"<br>
+			</td>
+			<td>
+				"okjhgftrds"<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				第三有机化合物<br>
+			</td>
+			<td>
+				"ncbdhf"<br>
+			</td>
+			<td>
+				"jnhba"<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				第四有机化合物<br>
+			</td>
+			<td>
+				"nmbjhvfcdr"<br>
+			</td>
+			<td>
+				"kmvn"<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				第五有机化合物<br>
+			</td>
+			<td>
+				"abfgc"<br>
+			</td>
+			<td>
+				"abfgcqsw"<br>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<span style="font-size:16px;"> <span style="color:#E53333;">如果CC1，CC2的五个相似度中有至少一个值等于100，则可以认为CC1和CC2是相似的</span><br>
+CC1，CC2的总相似度定义为以上五个相似度之和<br>
+<br>
+<strong><span style="font-size:18px;">API说明</span></strong><br>
+以下一个api是main提供的 user.cpp内可以直接调用<br>
+</span> 
+<table style="width:100%;" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<strong><span style="font-size:18px;"><span style="color:#003399;">int</span> calc_correlation(<span style="color:#003399;">char</span> str1[], <span style="color:#003399;">char</span> str2)</span></strong><br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				这个方法计算两个有机化合物之间的相似度<br>
+参数说明<br>
+str1：需要计算相似度的有机化合物<br>
+str2：需要计算相似度的有机化合物<br>
+返回值<br>
+两个有机化合物的相似度
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<span style="font-size:16px;"> 以下API需要在user.cpp中实现<br>
+</span> 
+<table style="width:100%;" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<strong><span style="font-size:18px;"><span style="color:#003399;">void</span> init()</span></strong><br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				这个方法在每个测试用例的最开始调用一次<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				void addDB(INFO info)<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				这个方法将一个复杂有机化合物材料添加到数据库中<br>
+在数据库中，不存在两个相同的复杂有机化合物材料记录<br>
+换言之，不存在两个复杂有机化合物材料含有五个相同的有机化合物<br>
+参数说明<br>
+info：添加的复杂有机化合物材料的信息
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong><span style="font-size:18px;"><span style="color:#003399;">int</span> newCompound(<span style="color:#003399;">INFO</span> info)</span></strong><br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				这个方法是 首先在数据库中寻找与新发现的复杂有机化合物材料<span style="color:#E53333;">相似的复杂有机化合物材料</span>，然后返回其中总相似度最高的复杂有机化合物材料。<br>
+调用 newCompound()后 addDB()不会再调用。<br>
+新发现的复杂有机化合物材料所包含的五种有机化合物一定存在于数据库中，<br>
+换言之，新发现的复杂有机化合物材料的第一有机化合物一定是数据库中各复杂有机化合物材料的第一有机化合物的 其中一个，<br>
+新发现的复杂有机化合物材料的第二有机化合物一定是数据库中各复杂有机化合物材料的第二有机化合物的 其中一个。（第三第四第五以此类推）<br>
+参数说明<br>
+info：新发现的复杂有机化合物材料的信息<br>
+返回值<br>
+返回与新发现的复杂有机化学物材料相似的 且 总相似度最高的 复杂有机化合物材料的总相似度
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<span style="font-size:16px;"> <strong>举个例子</strong><br>
+数据库中有三个复杂有机化合物材料[CC1]、[CC2]、[CC3]，Lucy发现了一个新的复杂有机化合物材料[CC4]（如下图所示）<br>
+（每个有机化合物由一个长度不超过10的全小写字母组成的字符串表示）<br>
+<img src="./SRCG OJ_files/20180211160612_56945.png" alt=""><br>
+<br>
+下表是CC1和CC4的相似度计算结果<br>
+显然, 五个相似度中都没有100，因此CC1和CC4是不相似的<br>
+</span> 
+<table style="width:100%;" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
+	<tbody>
+		<tr>
+			<td>
+				sum<br>
+			</td>
+			<td>
+				457<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calc_correlation(CC1.first, CC4.first)<br>
+			</td>
+			<td>
+				80<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calc_correlation(CC1.second, CC4.second)<br>
+			</td>
+			<td>
+				98<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calc_correlation(CC1.third, CC4.third)<br>
+			</td>
+			<td>
+				97<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calc_correlation(CC1.fourth, CC4.fourth)<br>
+			</td>
+			<td>
+				87<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calc_correlation(CC1.fifth, CC4.fifth)<br>
+			</td>
+			<td>
+				95<br>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<span style="font-size:16px;"> 下表是CC2和CC4的相似度计算结果<br>
+显然, 五个相似度中存在100，因此CC2和CC4是相似的，总相似度是453<br>
+</span> 
+<table style="width:100%;" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
+	<tbody>
+		<tr>
+			<td>
+				sum<br>
+			</td>
+			<td>
+				453<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calc_correlation(CC2.first, CC4.first)<br>
+			</td>
+			<td>
+				80<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calc_correlation(CC2.second, CC4.second)<br>
+			</td>
+			<td>
+				100<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calc_correlation(CC2.third, CC4.third)<br>
+			</td>
+			<td>
+				100<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calc_correlation(CC2.fourth, CC4.fourth)<br>
+			</td>
+			<td>
+				85<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calc_correlation(CC2.fifth, CC4.fifth)<br>
+			</td>
+			<td>
+				88<br>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<span style="font-size:16px;"> 下表是CC3和CC4的相似度计算结果<br>
+显然, 五个相似度中存在100，因此CC3和CC4是相似的，总相似度是449<br>
+</span> 
+<table style="width:100%;" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
+	<tbody>
+		<tr>
+			<td>
+				sum<br>
+			</td>
+			<td>
+				449<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calc_correlation(CC3.first, CC4.first)<br>
+			</td>
+			<td>
+				100<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calc_correlation(CC3.second, CC4.second)<br>
+			</td>
+			<td>
+				78<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calc_correlation(CC3.third, CC4.third)<br>
+			</td>
+			<td>
+				71<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calc_correlation(CC3.fourth, CC4.fourth)<br>
+			</td>
+			<td>
+				100<br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calc_correlation(CC3.fifth, CC4.fifth)<br>
+			</td>
+			<td>
+				100<br>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<span style="font-size:16px;"> CC2和CC3都是新发现的CC4的相似复杂有机化合物材料，而CC2是拥有最高的相似度的，总相似度为 453<br>
+换言之，以上例子中数据库存在CC1、CC2、CC3，当Lucy发现了新材料CC4，当调用newCompound(CC4)，其返回 453<br>
+<br>
+<strong>约束条件</strong><br>
+1. init()方法会在每个测试用例开始时调用一次；<br>
+2. 每个测试用例中，addDB()方法最多调用5000次；<br>
+3. 每个测试用例中，newCompound()方法最多调用5000次；<br>
+4. 每个测试用例中，newCompound()方法调用后不会再调用addDB()方法；<br>
+5. 每一个复杂有机化合物材料都由五个有机化合物组成（分别是第一有机化合物，第二有机化合物，第三有机化合物，第四有机化合物和第五有机化合物）<br>
+<span style="color:#E53333;">6. 如果两种复杂有机化合物材料的五个相似度中有至少一个相似度等于100，则可以认为这两种复杂有机化合物材料是相似的</span><br>
+7. 每个有机化合物由一个长度不超过10的全小写字母组成的字符串表示<br>
+8. 有机化合物的种类不超过500种<br>
+&nbsp;&nbsp;&nbsp;换言之，最多有500中第一有机化合物，最多有500中第二有机化合物；（第三四五有机化合物以此类推）<br>
+9. 保证组成新发现的复杂有机化合物材料的五种有机化合物都已知并存在于数据库中。<br>
+</span><br>
+<strong><span style="font-size:18px;">Plz only submit user.cpp</span></strong><br>
+<table style="width:100%;" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<strong><span style="font-size:16px;">main.cpp</span></strong><br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				#ifndef _CRT_SECURE_NO_WARNINGS<br>
+#define _CRT_SECURE_NO_WARNINGS<br>
+#endif<br>
+<br>
+#include &lt;stdio.h&gt;<br>
+#include &lt;string.h&gt;<br>
+#include &lt;stdlib.h&gt;<br>
+<br>
+#define MAX_N 5000<br>
+#define MAX_M 5<br>
+#define MAX_R 500<br>
+<br>
+typedef struct {<br>
+&nbsp;&nbsp; &nbsp;char first[11];<br>
+&nbsp;&nbsp; &nbsp;char second[11];<br>
+&nbsp;&nbsp; &nbsp;char third[11];<br>
+&nbsp;&nbsp; &nbsp;char fourth[11];<br>
+&nbsp;&nbsp; &nbsp;char fifth[11];<br>
+}INFO;<br>
+<br>
+////////////////////////////////////////////////////////////////////////////////<br>
+////////////////////////////////////////////////////////////////////////////////<br>
+<br>
+static int Weight;<br>
+<br>
+extern void init();<br>
+extern void addDB(INFO info);<br>
+extern int newCompound(INFO info);<br>
+<br>
+int calc_correlation(const char str1[11], const char str2[11])<br>
+{<br>
+&nbsp;&nbsp; &nbsp;int sum = 0;<br>
+&nbsp;&nbsp; &nbsp;if (strcmp(str1, str2) == 0) return 100;<br>
+&nbsp;&nbsp; &nbsp;else {<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;for (int i = 0; i &lt; 10; ++i) {<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (str1[i] == 0 || str2[i] == 0) break;<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;sum += ((26 - abs(str1[i] - str2[i])) * Weight);<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br>
+&nbsp;&nbsp; &nbsp;}<br>
+&nbsp;&nbsp; &nbsp;sum /= 100;<br>
+&nbsp;&nbsp; &nbsp;if (sum &gt; 99) sum = 99;<br>
+&nbsp;&nbsp; &nbsp;return sum;<br>
+}<br>
+<br>
+////////////////////////////////////////////////////////////////////////////////<br>
+////////////////////////////////////////////////////////////////////////////////<br>
+<br>
+static int N, K, R[MAX_M];<br>
+static char String[MAX_M][MAX_R][11];<br>
+static int Compound[MAX_N * 2][MAX_M];<br>
+<br>
+static int seed;<br>
+static int pseudo_rand() {<br>
+&nbsp;&nbsp; &nbsp;seed = seed * 214013 + 2531011;<br>
+&nbsp;&nbsp; &nbsp;return (seed &gt;&gt; 16) &amp; 0x7fff;<br>
+}<br>
+<br>
+static void make_compound()<br>
+{<br>
+&nbsp;&nbsp; &nbsp;for (int i = 0; i &lt; MAX_M; ++i) {<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;for (int k = 0; k &lt; R[i]; ++k) {<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;int length = pseudo_rand() % 6 + 5;<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;for (int m = 0; m &lt; length; ++m) {<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;String[i][k][m] = 'a' + pseudo_rand() % 26;<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;String[i][k][length] = 0;<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br>
+&nbsp;&nbsp; &nbsp;}<br>
+<br>
+&nbsp;&nbsp; &nbsp;for (int i = 0; i &lt; (N + K); ++i) {<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;for (int k = 0; k &lt; MAX_M; ++k) {<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Compound[i][k] = pseudo_rand() % R[k];<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br>
+&nbsp;&nbsp; &nbsp;}<br>
+}<br>
+<br>
+static int run()<br>
+{<br>
+&nbsp;&nbsp; &nbsp;int score = 100;<br>
+<br>
+&nbsp;&nbsp; &nbsp;scanf("%d %d %d %d", &amp;N, &amp;K, &amp;seed, &amp;Weight);<br>
+&nbsp;&nbsp; &nbsp;scanf("%d %d %d %d %d", &amp;R[0], &amp;R[1], &amp;R[2], &amp;R[3], &amp;R[4]);<br>
+<br>
+&nbsp;&nbsp; &nbsp;make_compound();<br>
+<br>
+&nbsp;&nbsp; &nbsp;init();<br>
+<br>
+&nbsp;&nbsp; &nbsp;for (int i = 0; i &lt; N; ++i) {<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;INFO info;<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;strcpy(info.first, String[0][Compound[i][0]]);<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;strcpy(info.second, String[1][Compound[i][1]]);<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;strcpy(info.third, String[2][Compound[i][2]]);<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;strcpy(info.fourth, String[3][Compound[i][3]]);<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;strcpy(info.fifth, String[4][Compound[i][4]]);<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;addDB(info);<br>
+&nbsp;&nbsp; &nbsp;}<br>
+<br>
+&nbsp;&nbsp; &nbsp;for (int i = N; i &lt; (N + K); ++i) {<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;int answer;<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;scanf("%d", &amp;answer);<br>
+<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;INFO info;<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;strcpy(info.first, String[0][Compound[i][0]]);<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;strcpy(info.second, String[1][Compound[i][1]]);<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;strcpy(info.third, String[2][Compound[i][2]]);<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;strcpy(info.fourth, String[3][Compound[i][3]]);<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;strcpy(info.fifth, String[4][Compound[i][4]]);<br>
+<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;int result = newCompound(info);<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (result != answer)<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;score = 0;<br>
+&nbsp;&nbsp; &nbsp;}<br>
+<br>
+&nbsp;&nbsp; &nbsp;return score;<br>
+}<br>
+<br>
+int main()<br>
+{<br>
+&nbsp;&nbsp; &nbsp;setbuf(stdout, NULL);<br>
+&nbsp;&nbsp; &nbsp;//freopen("sample_input.txt", "r", stdin);<br>
+<br>
+&nbsp;&nbsp; &nbsp;int T;<br>
+&nbsp;&nbsp; &nbsp;scanf("%d", &amp;T);<br>
+<br>
+&nbsp;&nbsp; &nbsp;for (int tc = 1; tc &lt;= T; tc++)<br>
+&nbsp;&nbsp; &nbsp;{<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;printf("#%d %d\n", tc, run());<br>
+&nbsp;&nbsp; &nbsp;}<br>
+<br>
+&nbsp;&nbsp; &nbsp;return 0;<br>
+}<br>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<table style="width:100%;" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<strong><span style="font-size:16px;">user.cpp</span></strong><br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				/*<br>
+typedef struct {<br>
+&nbsp;&nbsp; &nbsp;char first[11];<br>
+&nbsp;&nbsp; &nbsp;char second[11];<br>
+&nbsp;&nbsp; &nbsp;char third[11];<br>
+&nbsp;&nbsp; &nbsp;char fourth[11];<br>
+&nbsp;&nbsp; &nbsp;char fifth[11];<br>
+}INFO;<br>
+<br>
+extern int calc_correlation(const char str1[11], const char str2[11]);<br>
+*/<br>
+<br>
+void init()<br>
+{<br>
+}<br>
+<br>
+void addDB(INFO info)<br>
+{<br>
+}<br>
+<br>
+int newCompound(INFO info)<br>
+{<br>
+&nbsp;&nbsp; &nbsp;return 0;<br>
+}<br>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<br></div><h2>输入</h2><div class="content"><span style="font-size:16px;">输入输出包含在 main code,因此请不要在user code内包含输入输出<br>
+输入输出格式请参考sample IO</span></div><h2>输出</h2><div class="content"><span style="font-size:16px;">输入输出包含在 main code,因此请不要在user code内包含输入输出<br>
+输入输出格式请参考sample IO</span></div><h2>样例输入</h2>
+<pre class="content"><span class="sampledata">3
+20 20 13410 35
+5 4 5 3 2
+394
+443
+453
+405
+386
+441
+439
+385
+397
+389
+443
+381
+355
+436
+380
+345
+408
+392
+385
+441
+50 50 18780 42
+10 7 10 5 7
+411
+412
+377
+398
+394
+418
+349
+376
+359
+450
+395
+396
+422
+381
+400
+394
+402
+372
+370
+393
+400
+352
+398
+412
+375
+361
+394
+391
+416
+374
+427
+384
+360
+389
+464
+389
+379
+390
+336
+372
+371
+356
+401
+354
+378
+399
+408
+392
+470
+393
+300 300 29244 50
+23 23 25 16 12
+413
+419
+379
+415
+393
+402
+396
+363
+413
+450
+423
+408
+416
+408
+410
+428
+393
+361
+420
+472
+417
+421
+404
+413
+420
+434
+446
+408
+403
+418
+387
+403
+409
+412
+396
+419
+424
+392
+398
+429
+400
+434
+431
+429
+390
+405
+403
+390
+405
+390
+418
+391
+374
+402
+411
+413
+445
+411
+405
+379
+413
+400
+414
+421
+414
+478
+449
+411
+415
+408
+381
+408
+398
+387
+410
+391
+402
+408
+413
+399
+409
+409
+431
+472
+394
+429
+396
+393
+385
+431
+443
+416
+443
+406
+427
+390
+429
+419
+435
+371
+411
+424
+391
+425
+430
+401
+399
+401
+391
+392
+396
+419
+439
+392
+426
+414
+439
+381
+423
+417
+420
+400
+381
+383
+433
+418
+412
+399
+410
+452
+407
+425
+430
+408
+412
+418
+424
+407
+409
+491
+431
+388
+406
+444
+380
+431
+398
+413
+394
+420
+367
+415
+403
+413
+437
+413
+438
+421
+414
+411
+420
+409
+404
+406
+434
+412
+383
+430
+394
+389
+412
+370
+394
+406
+413
+386
+427
+444
+432
+398
+385
+452
+438
+402
+410
+437
+408
+420
+384
+433
+373
+398
+384
+457
+388
+416
+463
+453
+429
+402
+397
+413
+418
+430
+428
+400
+401
+444
+408
+421
+405
+393
+429
+431
+390
+416
+410
+414
+430
+398
+424
+414
+386
+428
+407
+392
+417
+385
+387
+396
+400
+404
+387
+420
+385
+402
+412
+399
+373
+430
+415
+445
+389
+422
+389
+422
+410
+389
+401
+448
+431
+394
+441
+393
+402
+446
+428
+447
+427
+400
+386
+394
+408
+400
+404
+444
+430
+423
+402
+420
+386
+382
+436
+401
+406
+399
+467
+412
+360
+421
+399
+453
+401
+367
+407
+390
+413
+397
+442
+371
+444
+389
+363
+370
+418
+433
+417
+398
+401
+397
+</span></pre><h2>样例输出</h2>
+<pre class="content"><span class="sampledata">#1 100
+#2 100
+#3 100
+</span></pre><h2>提示</h2>
+<div class="content"><p></p></div><center>[<a href="http://109.131.7.129/OJ/submitpage.php?cid=1048&amp;pid=0&amp;langmask=262141">提交</a>][<a href="http://109.131.7.129/OJ/problemstatus.php?id=1271">状态</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="./SRCG OJ_files/jquery.min.js.下载"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="./SRCG OJ_files/bootstrap.min.js.下载"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<marquee  id=broadcast scrollamount=3 scrolldelay=30 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"~SRC-G Online Judge\u7cfb\u7edf~ \u8bb2\u5e08\u56e2\u6210\u5458:suxian.zhang(\u6821\u957f);shuyi.luo(\u4e13\u5bb6);junnan.fu(\u7248\u4e3b);jianhui.yan;y2016.liu;haoran.lv;yuqing26.wu;hr.z;jx.liang;qyong.liang;tianwei.hong;qu.xiong;jiaqi.shao;jian.guan;yiluo.huang;\n"+"</marquee>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+});
+
+</script>
+
+	    
+  
+
+<!--not cached-->
+
+<div id="footer" class="center">GPLv2 licensed by <a href="https://github.com/zhblue/hustoj">HUSTOJ</a> 2018 </div></body></html>

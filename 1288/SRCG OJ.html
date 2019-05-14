@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://109.131.7.129/OJ/problem.php?cid=1084&pid=0 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://109.131.7.129/favicon.ico">
+
+    <title>SRCG OJ</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="./SRCG OJ_files/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="./SRCG OJ_files/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./SRCG OJ_files/local.css">
+
+
+
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://109.131.7.129/OJ/">SRCG OJ</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	                    <li><a href="http://109.131.7.129/OJ/bbs.php">讨论版</a></li>
+	      <li><a href="http://109.131.7.129/OJ/faqs.php">常见问答</a></li>
+              <li><a href="http://109.131.7.129/OJ/problemset.php">问题</a></li>
+              <li><a href="http://109.131.7.129/OJ/status.php">状态</a></li>
+              <li><a href="http://109.131.7.129/OJ/ranklist.php">排名</a></li>
+              <li><a href="http://109.131.7.129/OJ/contest.php">竞赛&amp;作业</a></li>
+	      <li><a>[</a></li>
+              <li class="active"><a href="http://109.131.7.129/OJ/contest.php?cid=1084">
+			问题	      </a></li>
+               <li class="active"><a href="http://109.131.7.129/OJ/status.php?cid=1084">
+			状态	      </a></li>
+              <li class="active"><a href="http://109.131.7.129/OJ/contestrank.php?cid=1084">
+			排名	      </a></li>
+              <!--<li  class="active" ><a href="contestrank-oi.php?cid=1084">
+			OI排名	      </a></li>-->
+              <li class="active"><a href="http://109.131.7.129/OJ/conteststatistics.php?cid=1084">
+			统计	      </a></li>
+	      <li><a>]</a></li>
+              <!--<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+	-->
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="http://109.131.7.129/OJ/problem.php?cid=1084&amp;pid=0#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">登录</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="./SRCG OJ_files/profile.php"></script><li><a href="http://109.131.7.129/OJ/loginpage.php">登录</a></li>&nbsp;<li><a href="http://109.131.7.129/OJ/registerpage.php">注册</a></li>&nbsp;
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron"><marquee id="broadcast" scrollamount="3" scrolldelay="30" onmouseover="this.stop()" onmouseout="this.start()" class="toprow">~SRC-G Online Judge系统~ 讲师团成员:suxian.zhang(校长);shuyi.luo(专家);junnan.fu(版主);jianhui.yan;y2016.liu;yuqing26.wu;hr.z;jx.liang;qyong.liang;tianwei.hong;jiaqi.shao;jian.guan;jida.liu;yiluo.huang;
+</marquee>
+	
+<title>问题 A: ★无人机表演 </title><center><h2>问题 A: ★无人机表演</h2><span class="green">时间限制: </span>10 Sec&nbsp;&nbsp;<span class="green">内存限制: </span>256 MB&nbsp;&nbsp;<span class="red">Special Judge</span><br><span class="green">提交: </span>332&nbsp;&nbsp;<span class="green">解决: </span>30<br>[<a href="http://109.131.7.129/OJ/submitpage.php?cid=1084&amp;pid=0&amp;langmask=262133">提交</a>][<a href="http://109.131.7.129/OJ/problemstatus.php?id=1288">状态</a>][<a href="http://109.131.7.129/OJ/bbs.php?pid=1288&amp;cid=1084">讨论版</a>]</center><h2>题目描述</h2><div class="content"><p class="MsoNormal">
+	<span><span><span>（Tips：不一定要必须用最优的方案来走，只要尽量少就行了）</span></span></span>
+</p>
+<p class="MsoNormal">
+	<span><span><span>Lucy</span></span><span style="font-family:宋体;">在不断给人们完成很多解决方案之后，名气大增，更是接到了一个重要任务</span><span><span>----</span></span><span style="font-family:宋体;">广州塔无人机表演。</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span><span><span>D </span></span><span style="font-family:宋体;">架无人机飞在海心沙上空的固定区域并且展示各种图案。</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">图案是一个</span><span><span> W*H </span></span><span style="font-family:宋体;">的图案，</span><span><span>Lucy</span></span><span style="font-family:宋体;">必须通过操控多个无人机创建这些图案，如下：</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span><span><span><span></span><span></span></span></span></span>&nbsp;<img alt="" src="./SRCG OJ_files/20180611160328_52613.png">&nbsp;&nbsp;&nbsp; <img alt="" src="./SRCG OJ_files/20180611160425_83130.png"> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">图案显示的是无人机之间的相对位置，并不是绝对位置。</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">所有的无人机都是一样的，当创建一个图案时，无人机的顺序是没有关系的。</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">无人机可以上，下，左，右，或者保持原位来进行一个行动，每个行动需要</span><span><span>1</span></span><span style="font-family:宋体;">秒，且所有无人机的行动是同时发生的。</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">两个或两个以上的无人机不能同时移动到相同的位置，这样会相撞。但如果两只无人机中，一只不动，另一只移动到相同的位置，这是不会相撞的。如下：</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span><span><span><span></span></span></span></span>&nbsp;<img alt="" src="./SRCG OJ_files/20180611160909_78266.png"><img alt="" src="./SRCG OJ_files/20180611160909_11811.png"> 
+</p>
+<p class="MsoNormal">
+	<img alt="" src="./SRCG OJ_files/20180611160909_58028.png"><img alt="" src="./SRCG OJ_files/20180611161236_61340.png"> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span><span><span></span><span></span></span></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">如果两个无人机交换位置也是没有问题的：</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<img alt="" src="./SRCG OJ_files/20180611160910_24808.png"><img alt="" src="./SRCG OJ_files/20180611160910_42684.png"> 
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	<span><span></span><span></span></span>
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">无人机不能离开演示区域，演示区域的真实坐标范围是</span><span><span>[0,99]</span></span><span style="font-family:宋体;">。</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">每张图案的执行要尽快，超过时间限制，会成为一个失败的演出。</span></span> 
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">实现控制最快控制无人机表演的</span><span><span>API</span></span><span style="font-family:宋体;">。</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">我们可以注意到，创建图案的最少时间很大部分取决于开始的坐标，因为无人机不会飞出区域之外。</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:宋体;"><span>基于一个确定的坐标，</span><a name="undefined"></a><span>创建图案的最少时间</span><span>，会相差</span></span><span><span><span>1</span></span><span style="font-family:宋体;">或者等于当开始坐标进行了一个移动的创建图案的最少时间。（</span><span><span>The minimum time required to create a scene from a certain starting coordinates is equal to or as different as +-1 from the minimum time when the starting coordinates are shifted by one space up, down, left, or right.</span></span><span style="font-family:宋体;">）</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">需要实现以下</span><span><span>API</span></span><span style="font-family:宋体;">：</span><span></span></span> 
+</p>
+<table style="width:100%;" bordercolor="#000000" cellspacing="0" cellpadding="2" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<span><span><span>Void init(int D,int droneX[], int droneY[])</span></span></span> 
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>
+					<span><span style="font-family:宋体;"></span></span>&nbsp;
+				</p>
+				<p>
+					<span><span style="font-family:宋体;">初始化</span><span><span>API</span></span><span style="font-family:宋体;">，每个</span><span><span>case</span></span><span style="font-family:宋体;">开始时会调用。</span></span> 
+				</p>
+				<p>
+					<span><span style="font-family:宋体;"></span><span></span></span>&nbsp;
+				</p>
+				<p class="MsoNormal">
+					<span><span style="font-family:宋体;">参数：</span><span></span></span> 
+				</p>
+				<p class="MsoNormal">
+					<span><span><span>D </span></span><span style="font-family:宋体;">无人机数量（</span><span><span>2 &lt;= D &lt;= 7</span></span><span style="font-family:宋体;">）</span><span></span></span> 
+				</p>
+				<p class="MsoNormal">
+					<span><span><span>droneX[]:</span></span><span style="font-family:宋体;">无人机</span><span><span>X</span></span><span style="font-family:宋体;">坐标的数组</span><span></span></span> 
+				</p>
+				<p class="MsoNormal">
+					<span><span><span>droneY[]:</span></span><span style="font-family:宋体;">无人机</span><span><span>y</span></span><span style="font-family:宋体;">坐标的数组</span><span></span></span> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span><span><span>StartXY makeScene(int W, int H, int pattern[][])</span></span></span> 
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>
+					<span><span style="font-family:宋体;"></span></span>&nbsp;
+				</p>
+				<p>
+					<span><span style="font-family:宋体;">根据</span><span><span>pattern </span></span><span style="font-family:宋体;">的</span><span><span>W*H</span></span><span style="font-family:宋体;">的数组创建给定的图案。</span><span></span></span> 
+				</p>
+				<p class="MsoNormal">
+					<span><span style="font-family:宋体;">当事件完成时，返回图案的左上角坐标。</span><span></span></span> 
+				</p>
+				<p class="MsoNormal">
+					<span><span style="font-family:宋体;">在</span><span><span>pattern</span></span><span style="font-family:宋体;">中，</span><span><span>1</span></span><span style="font-family:宋体;">代表有无人机，</span><span><span>0</span></span><span style="font-family:宋体;">代表没有。</span><span></span></span> 
+				</p>
+				<p class="MsoNormal">
+					&nbsp;
+				</p>
+				<p class="MsoNormal">
+					<span><span style="font-family:宋体;">参数：</span><span></span></span> 
+				</p>
+				<p class="MsoNormal">
+					<span><span><span>W 1&lt;=W&lt;=100</span></span></span> 
+				</p>
+				<p class="MsoNormal">
+					<span><span><span>H 1&lt;=H&lt;=100</span></span></span> 
+				</p>
+				<p class="MsoNormal">
+					<span><span><span>Pattern[][] </span></span><span style="font-family:宋体;">图案信息</span><span></span></span> 
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">提供以下</span><span><span>API</span></span><span style="font-family:宋体;">：</span><span></span></span> 
+</p>
+<table style="width:100%;" bordercolor="#000000" cellspacing="0" cellpadding="2" border="1">
+	<tbody>
+		<tr>
+			<td>
+				<span><span><span>Bool controlDrones(int direction[])</span></span></span> 
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>
+					<span><span style="font-family:宋体;"></span></span>&nbsp;
+				</p>
+				<p>
+					<span><span style="font-family:宋体;">控制无人机行动一秒的</span><span><span>API</span></span><span style="font-family:宋体;">，</span><span><span>direction</span></span><span style="font-family:宋体;">有</span><span><span>HOLD,RIGHT,DOWN,LEFT</span></span><span style="font-family:宋体;">和</span><span><span>UP</span></span><span style="font-family:宋体;">的值。</span><span></span></span> 
+				</p>
+				<p class="MsoNormal">
+					<span><span style="font-family:宋体;">根据</span><span><span>direction[i]</span></span><span style="font-family:宋体;">的值，移动第</span><span><span>i</span></span><span style="font-family:宋体;">个无人机。</span><span></span></span> 
+				</p>
+				<p class="MsoNormal">
+					&nbsp;
+				</p>
+				<p class="MsoNormal">
+					<span><span style="font-family:宋体;">返回</span><span><span>true</span></span><span style="font-family:宋体;">说明控制成功，</span><span><span>false</span></span><span style="font-family:宋体;">说明失败。</span><span></span></span> 
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">栗子：</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">有两个无人机，一开始的位置是：</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">无人机</span><span><span> 1</span></span><span style="font-family:宋体;">：（</span><span><span>50,47</span></span><span style="font-family:宋体;">）无人机</span><span><span>2</span></span><span style="font-family:宋体;">：（</span><span><span>50,50</span></span><span style="font-family:宋体;">）</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">图案为：</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<img alt="" src="./SRCG OJ_files/20180611160910_27948.png"> 
+</p>
+<p class="MsoNormal">
+	<span><span></span><span></span></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">可以通过</span><span><span>2</span></span></span><span><span><span style="font-family:宋体;">秒完成次图案：</span><span></span></span></span> 
+</p>
+<p class="MsoNormal">
+	<img alt="" src="./SRCG OJ_files/20180611160910_94708.png">&nbsp;&nbsp;&nbsp; <img alt="" src="./SRCG OJ_files/20180611160910_69224.png">&nbsp;&nbsp;&nbsp; <img alt="" src="./SRCG OJ_files/20180611160910_12314.png"> 
+</p>
+<span></span> 
+<p class="MsoNormal">
+	<span><span></span><span></span></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">当图案完成后，左上角的坐标就是（</span><span><span>49,48</span></span></span><span><span><span style="font-family:宋体;">）</span><span></span></span></span> 
+</p>
+<span></span> 
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">当下一个图案来了，如下：</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<img alt="" src="./SRCG OJ_files/20180611160910_60584.png"> 
+</p>
+<p class="MsoNormal">
+	<span><span></span><span></span></span>
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">可以通过</span><span><span>2</span></span><span style="font-family:宋体;">秒完成次图案：</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<img alt="" src="./SRCG OJ_files/20180611160910_84335.png">&nbsp;&nbsp;&nbsp;<img alt="" src="./SRCG OJ_files/20180611160910_80841.png"> 
+</p>
+<p class="MsoNormal">
+	<img alt="" src="./SRCG OJ_files/20180611160910_26780.png"> 
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">当图案完成后，左上角的坐标就是（</span><span><span>48,48</span></span><span style="font-family:宋体;">）</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span></span>
+</p>
+<p class="MsoNormal">
+	<span><span><span>PS</span></span><span style="font-family:宋体;">：</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span><span><span>1.D </span></span><span style="font-family:宋体;">：</span><span><span>[2,7]</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span><span><span>2.W,H : [1,100]</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span><span><span>3.</span></span><span style="font-family:宋体;">无人机的真实坐标范围</span><span><span>[0,99]</span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span><span><span>4.</span></span><span style="font-family:宋体;">图案的长宽给的是最可能小的范围</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span><span><span>5.makeScene()</span></span><span style="font-family:宋体;">最多调用</span><span><span>10</span></span><span style="font-family:宋体;">次</span><span></span></span> 
+</p>
+<p class="MsoNormal">
+	<span><span><span>6.</span></span><span style="font-family:宋体;">相同分数，调用</span><span><span>controlDrones()</span></span><span style="font-family:宋体;">次数越少越好</span></span> 
+</p>
+<p class="MsoNormal">
+	<span><span style="font-family:宋体;">7.The number of drones in a given pattern is equal to&nbsp;the number of drones D</span></span>&nbsp;
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<pre class="prettyprint lang-cpp">main.cpp
+=======================================
+#ifndef _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
+#include &lt;stdio.h&gt;
+
+#define MAXD				7
+#define MAXPATTERNSIZE		100
+#define MAXCONTROLDRONES	100000
+
+#define SCREENSIZE			100
+
+struct StartXY {
+	int x, y;
+};
+
+static int droneX[MAXD], droneY[MAXD];
+
+extern void init(int D, int droneX[MAXD], int droneY[MAXD]);
+extern StartXY makeScene(int W, int H, int pattern[MAXPATTERNSIZE][MAXPATTERNSIZE]);
+
+static int pattern[MAXPATTERNSIZE][MAXPATTERNSIZE];
+
+static int W, H, D, S;
+
+static bool okay;
+static int countControlDrones;
+
+static int score;
+
+static const double factor = 2.0;   // it will be changed
+
+#define HOLD			0
+#define RIGHT			1
+#define DOWN			2
+#define LEFT			3
+#define UP				4
+#define MAXDIRECTION	5
+
+static const int dx[MAXDIRECTION] = { 0, 1, 0, -1,  0};
+static const int dy[MAXDIRECTION] = { 0, 0, 1,  0, -1};
+
+bool controlDrones(int direction[MAXD]) {
+	if (!okay)
+		return false;
+
+	if (countControlDrones &gt;= MAXCONTROLDRONES)
+		return okay = false;
+	
+	++countControlDrones;
+
+	for (int d = 0; d &lt; D; ++d) {
+		if (direction[d] &lt; 0 || direction[d] &gt;= MAXDIRECTION)
+			return okay = false;
+		
+		droneX[d] += dx[direction[d]];
+		droneY[d] += dy[direction[d]];
+
+		if (droneX[d] &lt; 0 || droneX[d] &gt;= SCREENSIZE || droneY[d] &lt; 0 || droneY[d] &gt;= SCREENSIZE)
+			return okay = false;
+	}
+	
+	for (int d = 0; d &lt; D; ++d) {
+		if (direction[d] == HOLD) continue;
+		for (int e = d + 1; e &lt; D; ++e)
+			if (direction[e] != HOLD &amp;&amp; droneX[d] == droneX[e] &amp;&amp; droneY[d] == droneY[e])
+				return okay = false;		
+	}
+	
+	return true;
+}
+
+static bool isMatched(StartXY startXY) {
+	for (int d = 0; d &lt; D; ++d) {
+		int y = droneY[d] - startXY.y;
+		int x = droneX[d] - startXY.x;
+
+		if (x &lt; 0 || x &gt;= W || y &lt; 0 || y &gt;= H || pattern[y][x] == 0)
+			return false;
+		--pattern[y][x];
+	}
+	return true;
+}
+
+static void run() {
+	int limit;
+		
+	scanf("%d %d", &amp;D, &amp;S);
+	for (int d = 0; d &lt; D; ++d)
+		scanf("%d %d", &amp;droneX[d], &amp;droneY[d]);
+
+	int droneX_t[MAXD], droneY_t[MAXD];
+	
+	for (int d = 0; d &lt; D; ++d) {
+		droneX_t[d] = droneX[d];
+		droneY_t[d] = droneY[d];
+	}
+		
+	init(D, droneX_t, droneY_t);
+
+	okay = true; countControlDrones = 0;
+
+	for (int s = 0; s &lt; S; ++s) {
+		int t_pattern[MAXPATTERNSIZE][MAXPATTERNSIZE];
+		
+		scanf("%d %d %d", &amp;W, &amp;H, &amp;limit);
+
+		for (int y = 0; y &lt; H; ++y)
+		for (int x = 0; x &lt; W; ++x) {
+			scanf("%d", &amp;pattern[y][x]);
+			t_pattern[y][x] = pattern[y][x];
+		}
+
+		int expected = countControlDrones + limit * factor;
+
+		StartXY startXY = makeScene(W, H, t_pattern);
+
+		if (!okay || countControlDrones &gt; expected || !isMatched(startXY))
+			score = 0;	
+	}
+}
+
+int main() {
+    int TC;
+	
+    //freopen("sample_input.txt", "r", stdin);
+
+	setbuf(stdout, NULL);
+    scanf("%d", &amp;TC);
+
+	int totalscore = 0, totalcount = 0;
+    for (int testcase = 1; testcase &lt;= TC; ++testcase) {
+		score = 100;
+		run();
+		printf("#%d %d\n", testcase, score);
+		totalscore += score;
+		totalcount += countControlDrones; 
+    }
+	if (totalcount &gt; MAXCONTROLDRONES) totalcount = MAXCONTROLDRONES;
+	printf("total score = %d, total count = %d\n", totalscore / TC, totalcount);
+    return 0;
+}</pre>
+<pre class="prettyprint lang-cpp">usercode.cpp
+====================================
+/*
+#define MAXD			7
+#define MAXPATTERNSIZE	100
+
+struct StartXY {
+	int x, y;
+};
+
+#define HOLD			0
+#define RIGHT			1
+#define DOWN			2
+#define LEFT			3 #define UP				4
+#define MAXDIRECTION	5
+*/
+extern bool controlDrones(int direction[MAXD]);
+
+void init(int D, int droneX[MAXD], int droneY[MAXD]) {
+
+}
+
+StartXY makeScene(int W, int H, int pattern[MAXPATTERNSIZE][MAXPATTERNSIZE]) {
+	StartXY startXY;
+	
+	startXY.x = startXY.y = 0;
+	return startXY;
+}</pre>
+<pre class="prettyprint lang-java">main solution.java
+
+
+import java.util.Scanner;
+
+class Solution {	
+	private final static int MAXD   			= 7;
+	private final static int MAXPATTERNSIZE 	= 100;
+	private final static int MAXCONTROLDRONES 	= 100000;
+	
+	private final static int SCREENSIZE 		= 100;
+	
+	public static class StartXY {
+		int x, y;
+		
+		public StartXY() {
+			x = y = 0;
+		}
+	}
+	
+	private final static int droneX[] = new int[MAXD];
+	private final static int droneY[] = new int[MAXD];
+	
+	private final static int pattern[][] = new int[MAXPATTERNSIZE][MAXPATTERNSIZE];
+	
+	private static int W, H, D, S; 
+	
+	private static boolean okay;
+	private static int countControlDrones;
+	
+	private static int score;
+	
+	private final static double factor = 2.0;     // it will be changed
+	
+	private final static int HOLD = 0;
+	private final static int RIGHT = 1;
+	private final static int DOWN = 2;
+	private final static int LEFT = 3;
+	private final static int UP = 4;
+	private final static int MAXDIRECTION = 5;
+	
+	private final static int dx[] = { 0, 1, 0, -1, 0 };
+	private final static int dy[] = { 0, 0, 1, 0, -1 };
+	
+	private final static UserSolution usersolution = new UserSolution();
+	
+	public static boolean controlDrones(int direction[]) {
+		if (!okay)
+			return false;
+		
+		if (countControlDrones &gt;= MAXCONTROLDRONES)
+			return okay = false;
+		
+		++countControlDrones;
+		
+		for (int d = 0; d &lt; D; ++d) {
+			if (direction[d] &lt; 0 || direction[d] &gt;= MAXDIRECTION)
+				return okay = false;
+			
+			droneX[d] += dx[direction[d]];
+			droneY[d] += dy[direction[d]];
+			
+			if (droneX[d] &lt; 0 || droneX[d] &gt;= SCREENSIZE || droneY[d] &lt; 0 || droneY[d] &gt;= SCREENSIZE)
+				return okay = false;
+		}
+		
+		for (int d = 0; d &lt; D; ++d) {
+			if (direction[d] == HOLD) continue;
+			for (int e = d + 1; e &lt; D; ++e)
+				if (direction[e] != HOLD &amp;&amp; droneX[d] == droneX[e] &amp;&amp; droneY[d] == droneY[e])
+					return okay = false;
+		}
+		
+		return true;
+	}
+
+
+	private static boolean isMatched(StartXY startXY) {
+		for (int d = 0; d &lt; D; ++d) {
+			int y = droneY[d] - startXY.y;
+			int x = droneX[d] - startXY.x;
+
+			if (x &lt; 0 || x &gt;= W || y &lt; 0 || y &gt;= H || pattern[y][x] == 0)
+				return false;
+			--pattern[y][x];
+		}
+		return true;
+	}
+	
+	private static void run(Scanner sc) {
+		int limit;
+		
+		D = sc.nextInt();
+		S = sc.nextInt();
+		
+		for (int d = 0; d &lt; D; ++d) {
+			droneX[d] = sc.nextInt();
+			droneY[d] = sc.nextInt();
+		}
+		
+		int droneX_t[] = new int[MAXD];
+		int droneY_t[] = new int[MAXD];
+		
+		for (int d = 0; d &lt; D; ++d) {
+			droneX_t[d] = droneX[d];
+			droneY_t[d] = droneY[d];
+		}
+		
+		usersolution.init(D, droneX_t, droneY_t);
+		
+		okay = true; countControlDrones = 0;
+		
+		for (int s = 0; s &lt; S; ++s) {
+			int t_pattern[][] = new int[MAXPATTERNSIZE][MAXPATTERNSIZE];
+
+			W = sc.nextInt();
+			H = sc.nextInt();
+			limit = sc.nextInt();
+			
+			for (int y = 0; y &lt; H; ++y)
+			for (int x = 0; x &lt; W; ++x)
+				t_pattern[y][x] = pattern[y][x] = sc.nextInt();
+
+			int expected = countControlDrones + (int)(limit * factor);
+			
+			StartXY startXY = usersolution.makeScene(W, H, t_pattern);
+			
+			if (!okay || countControlDrones &gt; expected || !isMatched(startXY))
+				score = 0;
+		}
+	}
+	
+	public static void main(String[] args) throws Exception {
+		int TC;
+	
+		//System.setIn(new java.io.FileInputStream("res/sample_input.txt"));
+		Scanner sc = new Scanner(System.in);
+		TC = sc.nextInt();
+        
+        int totalscore = 0, totalcount = 0;
+		for (int testcase = 1; testcase &lt;= TC; ++testcase) {
+			score = 100;
+			run(sc);
+            System.out.println("#" + testcase + " " + score);
+            totalscore += score;
+            totalcount += countControlDrones;
+		}
+
+		if (totalcount &gt; MAXCONTROLDRONES) totalcount = MAXCONTROLDRONES;
+        System.out.println("total score = " + totalscore / TC + ", total count = " + totalcount);
+		sc.close();
+	}
+}</pre>
+<pre class="prettyprint lang-java">usersolution.java
+
+	class UserSolution {
+	private final static int MAXD   			= 7;
+	private final static int MAXPATTERNSIZE 	= 100;
+	
+	private final static int HOLD = 0;
+	private final static int RIGHT = 1;
+	private final static int DOWN = 2;
+	private final static int LEFT = 3;
+	private final static int UP = 4;
+	private final static int MAXDIRECTION = 5;
+	
+	// Main API : Solution.controlDrones(int direction[])
+	
+	void init(int D, int droneX[], int droneY[]) {
+	
+	}
+	
+	Solution.StartXY makeScene(int W, int H, int pattern[][]) {
+		Solution.StartXY startXY = new Solution.StartXY();
+		
+		return startXY;
+	}
+}</pre>
+<p class="MsoNormal">
+	&nbsp;
+</p>
+<p>
+	&nbsp;
+</p></div><h2>输入</h2><div class="content"></div><h2>输出</h2><div class="content"></div><h2>样例输入</h2>
+<pre class="content"><span class="sampledata">5
+2 2
+50 47
+50 50
+2 2 2
+0 1
+1 0
+4 1 2
+1 0 0 1
+3 5
+50 45
+50 50
+50 55
+3 2 5
+1 0 1
+0 1 0
+3 5 2
+1 0 0
+0 0 0
+0 0 0
+0 0 1
+1 0 0
+4 6 3
+1 0 0 0
+0 0 0 0
+1 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 1
+3 3 3
+0 1 0
+1 0 0
+0 0 1
+4 4 1
+0 1 0 0
+1 0 0 0
+0 0 0 0
+0 0 0 1
+3 5
+50 47
+50 50
+50 53
+1 6 1
+1
+0
+1
+0
+0
+1
+3 3 2
+0 0 1
+1 0 0
+0 1 0
+2 5 3
+1 0
+0 0
+0 0
+0 1
+1 0
+6 4 4
+0 0 0 0 0 1
+0 0 0 0 0 0
+1 0 0 0 0 0
+0 0 0 0 1 0
+3 5 4
+1 0 0
+0 0 0
+0 0 1
+0 0 0
+1 0 0
+4 5
+50 46
+50 48
+50 50
+50 52
+5 7 2
+0 0 0 0 1
+0 0 0 0 0
+0 0 0 0 0
+0 0 1 0 0
+0 0 0 0 0
+0 0 0 0 0
+1 0 1 0 0
+8 3 5
+0 1 0 0 0 0 0 0
+1 0 0 0 0 0 0 0
+0 0 1 0 0 0 0 1
+7 6 5
+0 0 0 0 0 0 1
+0 0 0 0 0 0 0
+0 0 0 0 0 0 0
+0 0 0 0 0 0 1
+0 0 0 0 0 0 0
+1 0 0 1 0 0 0
+4 7 5
+0 1 0 0
+1 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 1
+0 0 0 0
+0 0 0 1
+5 3 3
+0 1 0 0 0
+0 0 0 1 0
+1 0 0 0 1
+4 5
+42 58
+46 54
+50 50
+54 46
+9 2 8
+0 0 0 1 0 0 1 0 0
+1 0 0 0 0 0 0 0 1
+5 7 4
+0 0 1 0 0
+0 0 0 0 0
+0 0 0 0 1
+0 0 1 0 0
+0 0 0 0 0
+0 0 0 0 0
+1 0 0 0 0
+3 9 3
+0 0 1
+0 0 0
+0 0 0
+0 0 0
+0 0 1
+0 0 0
+0 0 0
+1 0 0
+0 0 1
+6 2 4
+0 0 1 0 0 1
+1 0 0 1 0 0
+7 4 3
+0 0 0 1 0 0 1
+1 0 0 0 0 0 0
+0 0 0 0 0 0 0
+0 0 0 0 0 0 1
+</span></pre><h2>样例输出</h2>
+<pre class="content"><span class="sampledata">#1 100
+#2 100
+#3 100
+#4 100
+#5 100
+total score = 100, total count = 74
+</span></pre><h2>提示</h2>
+<div class="content"><p></p></div><center>[<a href="http://109.131.7.129/OJ/submitpage.php?cid=1084&amp;pid=0&amp;langmask=262133">提交</a>][<a href="http://109.131.7.129/OJ/problemstatus.php?id=1288">状态</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="./SRCG OJ_files/jquery.min.js.下载"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="./SRCG OJ_files/bootstrap.min.js.下载"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<marquee  id=broadcast scrollamount=3 scrolldelay=30 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"~SRC-G Online Judge\u7cfb\u7edf~ \u8bb2\u5e08\u56e2\u6210\u5458:suxian.zhang(\u6821\u957f);shuyi.luo(\u4e13\u5bb6);junnan.fu(\u7248\u4e3b);jianhui.yan;y2016.liu;yuqing26.wu;hr.z;jx.liang;qyong.liang;tianwei.hong;jiaqi.shao;jian.guan;jida.liu;yiluo.huang;\r\n"+"</marquee>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+});
+
+</script>
+
+	    
+  
+
+<!--not cached-->
+
+<div id="footer" class="center">GPLv2 licensed by <a href="https://github.com/zhblue/hustoj">HUSTOJ</a> 2018 </div></body></html>

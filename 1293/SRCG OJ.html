@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://109.131.7.129/OJ/problem.php?id=1293 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://109.131.7.129/favicon.ico">
+
+    <title>SRCG OJ</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="./SRCG OJ_files/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="./SRCG OJ_files/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./SRCG OJ_files/local.css">
+
+
+
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://109.131.7.129/OJ/">SRCG OJ</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	                    <li><a href="http://109.131.7.129/OJ/bbs.php">讨论版</a></li>
+	      <li><a href="http://109.131.7.129/OJ/faqs.php">常见问答</a></li>
+              <li><a href="http://109.131.7.129/OJ/problemset.php">问题</a></li>
+              <li><a href="http://109.131.7.129/OJ/status.php">状态</a></li>
+              <li><a href="http://109.131.7.129/OJ/ranklist.php">排名</a></li>
+              <li><a href="http://109.131.7.129/OJ/contest.php">竞赛&amp;作业</a></li>
+              <!--<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+	-->
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="http://109.131.7.129/OJ/problem.php?id=1293#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">登录</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="./SRCG OJ_files/profile.php"></script><li><a href="http://109.131.7.129/OJ/loginpage.php">登录</a></li>&nbsp;<li><a href="http://109.131.7.129/OJ/registerpage.php">注册</a></li>&nbsp;
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron"><marquee id="broadcast" scrollamount="3" scrolldelay="30" onmouseover="this.stop()" onmouseout="this.start()" class="toprow">~SRC-G Online Judge系统~ 讲师团成员:suxian.zhang(校长);shuyi.luo(专家);junnan.fu(版主);jianhui.yan;y2016.liu;yuqing26.wu;hr.z;jx.liang;qyong.liang;tianwei.hong;jiaqi.shao;jian.guan;jida.liu;yiluo.huang;
+</marquee>
+	
+<title>问题 1293. -- ★ 日程表</title><center><h2>1293: ★ 日程表</h2><span class="green">时间限制: </span>10 Sec&nbsp;&nbsp;<span class="green">内存限制: </span>256 MB<br><span class="green">提交: </span>16&nbsp;&nbsp;<span class="green">解决: </span>14<br>[<a href="http://109.131.7.129/OJ/submitpage.php?id=1293">提交</a>][<a href="http://109.131.7.129/OJ/problemstatus.php?id=1293">状态</a>][<a href="http://109.131.7.129/OJ/bbs.php?pid=1293">讨论版</a>]</center><h2>题目描述</h2><div class="content"><p>
+	请实现一个日程表管理的程序
+</p>
+<p>
+	需要实现的API 有三个: Add Schedule, Delete Schedule, Search Schedule.
+</p>
+<p>
+	"Add Schedule"功能带有重复属性
+</p>
+<p>
+	重复属性包含类型和重复频率, 具体类型定义详见下表
+</p>
+<p>
+	</p><table width="428" height="208" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
+		<tbody>
+			<tr>
+				<td align="left">
+					<strong>类型</strong><br>
+				</td>
+				<td align="left">
+					<strong>描述</strong><br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					NONE<br>
+				</td>
+				<td>
+					不重复<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					DAILY<br>
+				</td>
+				<td>
+					每一日添加日程<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					WEEKLY<br>
+				</td>
+				<td>
+					每周添加日程<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					MONTHLY<br>
+				</td>
+				<td>
+					每月添加日程<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					YEARLY<br>
+				</td>
+				<td>
+					每年添加日程<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					EVERY3DAYS<br>
+				</td>
+				<td>
+					每三日添加日程<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					EVERY5DAYS<br>
+				</td>
+				<td>
+					每五日添加日程<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					EVERY10DAYS<br>
+				</td>
+				<td>
+					每十日添加日程<br>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+<p></p>
+<p>
+	<br>
+</p>
+<p>
+	"Delete Schedule" 功能删除定义日期内的所有日程
+</p>
+<p>
+	根据不同的删除模式, 也可以删除所有相同id的日程
+</p>
+<p>
+	<br>
+</p>
+<p>
+	"Search Schedule"功能搜索特定时间段的日程
+</p>
+<p>
+	<br>
+</p>
+<p>
+	API说明详见下表
+</p>
+<p>
+	</p><table style="width:100%;" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
+		<tbody>
+			<tr>
+				<td>
+					<p>
+						<span style="font-size:18px;color:#337FE5;">void</span><span style="font-size:18px;"> init()</span> 
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						每个测试用例开始会被调用一次
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						<span style="font-size:16px;"><span style="color:#337FE5;font-size:18px;">void </span><span style="font-size:18px;">addSchedule(</span><span style="color:#337FE5;font-size:18px;">int</span><span style="font-size:18px;"> id, </span><span style="color:#337FE5;font-size:18px;">DATE</span><span style="font-size:18px;"> date, </span><span style="color:#337FE5;font-size:18px;">REPEAT</span><span style="font-size:18px;"> repeat)</span></span> 
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						在日期"date"里添加日程"id"
+					</p>
+					<p>
+						当重复类型不是NONE,根据类型重复添加日程(具体详见下文的[例子])
+					</p>
+					<p>
+						id值是唯一的不会重复出现的
+					</p>
+					<p>
+						当重复类型是NONE时, 重复次数就是 1 , 否则重复次数值会大于等于 2 小于等于 100
+					</p>
+					<p>
+						添加日程的日期不会超过2099年12月31日
+					</p>
+					<p>
+						但重复类型是MONTHLY时, date的值 小于等于 28日
+					</p>
+					<p>
+						当重复类型为YEARLY时, date的值不会是2月29日
+					</p>
+					<p>
+						参数范围
+					</p>
+					<p>
+						1 &lt;= id &lt;= 9999
+					</p>
+					<p>
+						2000 &lt;= date.year &lt;= 2099
+					</p>
+					<p>
+						1 &lt;= date.month &lt;= 12
+					</p>
+					<p>
+						1 &lt;= date.day &lt;= 31
+					</p>
+					<p>
+						NONE &lt;= repeat.type &lt;= EVERY10DAYS
+					</p>
+					<p>
+						1 &lt;= repeat.cnt &lt;= 100
+					</p>
+					<p>
+						参数说明
+					</p>
+					<p>
+						id 添加日程的id
+					</p>
+					<p>
+						date 添加日程的日期
+					</p>
+					<p>
+						repeat 添加日程的重复属性
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						<span style="font-size:16px;"><span style="color:#337FE5;font-size:18px;">void</span><span style="font-size:18px;"> deleteSchedule(</span><span style="color:#337FE5;font-size:18px;">DATE</span><span style="font-size:18px;"> date, </span><span style="color:#337FE5;font-size:18px;">int</span><span style="font-size:18px;"> mode)</span></span> 
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						删除定义日期内的所有日程
+					</p>
+					<p>
+						当mode 为 1 时,&nbsp; 删除所有 与被删日程具有相同id的日程
+					</p>
+					<p>
+						date的范围跟 addSchedule 一样
+					</p>
+					<p>
+						<br>
+					</p>
+					<p>
+						参数说明
+					</p>
+					<p>
+						date 打算删除日程的日期
+					</p>
+					<p>
+						<br>
+					</p>
+					<p>
+						mode 删除模式
+					</p>
+					<p>
+						当 mode 为 0 时, 只删除该日期中所有添加的日程
+					</p>
+					<p>
+						当 mode 为 1 时, 除了删除该日期的所有添加的日程, 与被删日程id相同的日程也被删除
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						<span style="font-size:16px;"><span style="color:#337FE5;font-size:18px;">int</span><span style="font-size:18px;"> searchSchedule(</span><span style="color:#337FE5;font-size:18px;">DATE</span><span style="font-size:18px;"> from, </span><span style="color:#337FE5;font-size:18px;">DATE</span><span style="font-size:18px;"> to)</span></span> 
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						返回从 from 到 to 添加的日程的数量
+					</p>
+					<p>
+						to 一定大于等于 from
+					</p>
+					<p>
+						from 与 to 的范围跟 addSchedule 一样
+					</p>
+					<p>
+						搜索日期区间最大为 30日
+					</p>
+					<p>
+						参数说明
+					</p>
+					<p>
+						from 搜索的开始日期
+					</p>
+					<p>
+						to 搜索的结束日期
+					</p>
+					<p>
+						返回值
+					</p>
+					<p>
+						从from 到 to 添加的日程的数量
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+<p></p>
+<p>
+	<br>
+</p>
+<p>
+	以下API在main中已经实现,user code中可以直接调用
+</p>
+<p>
+	</p><table style="width:100%;" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
+		<tbody>
+			<tr>
+				<td>
+					<p>
+						<span style="font-size:16px;"><span style="color:#337FE5;font-size:18px;">int</span><span style="font-size:18px;"> daysOfMonth(</span><span style="color:#337FE5;font-size:18px;">int</span><span style="font-size:18px;"> yy, </span><span style="color:#337FE5;font-size:18px;">int</span><span style="font-size:18px;"> mm)</span></span> 
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						返回yy年mm月的日数
+					</p>
+					<p>
+						返回值
+					</p>
+					<p>
+						yy年mm月的日数
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+<p></p>
+<h2>
+	[例子]
+</h2>
+<p>
+	<br>
+</p>
+<p>
+	调用8次addSchedule()
+</p>
+<p>
+	</p><table style="width:100%;" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
+		<tbody>
+			<tr>
+				<td>
+					addSchedule()<br>
+				</td>
+				<td>
+					id=1, date.year=2018, date.month=7, date.day = 4, repeat.type = NONE, repeat.cnt = 1 <br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					addSchedule()<br>
+				</td>
+				<td>
+					id=2, date.year=2018, date.month=7, date.day = 9, repeat.type = DAILY, repeat.cnt = 5<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					addSchedule()<br>
+				</td>
+				<td>
+					id=3, date.year=2018, date.month=7, date.day = 5, repeat.type = WEEKLY, repeat.cnt = 4<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					addSchedule()<br>
+				</td>
+				<td>
+					id=4, date.year=2018, date.month=7, date.day = 12, repeat.type = MONTHLY, repeat.cnt = 3<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					addSchedule()<br>
+				</td>
+				<td>
+					id=5, date.year=2018, date.month=7, date.day = 15, repeat.type = YEARLY, repeat.cnt = 2<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					addSchedule()<br>
+				</td>
+				<td>
+					id=6, date.year=2018, date.month=7, date.day = 1, repeat.type = EVERY3DAYS, repeat.cnt = 8<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					addSchedule()<br>
+				</td>
+				<td>
+					id=7, date.year=2018, date.month=7, date.day = 2, repeat.type = EVERY5DAYS, repeat.cnt = 4<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					addSchedule()<br>
+				</td>
+				<td>
+					id=8, date.year=2018, date.month=7, date.day = 9, repeat.type = EVERY10DAYS, repeat.cnt = 3<br>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+<br>
+当以上执行完后, 日程表如下图所示(虽然id 4 的 8月12号, 9月12号日程, id 5的19年7月15号日程并没有体现出来)
+<p></p>
+<p>
+	<img src="./SRCG OJ_files/20180723183300_79925.png" alt=""> 
+</p>
+<p>
+	<br>
+</p>
+<p>
+	当调用 searchSchedule() 如下,会返回 4
+</p>
+<p>
+	</p><table style="width:100%;" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
+		<tbody>
+			<tr>
+				<td>
+					searchSchedule()<br>
+				</td>
+				<td>
+					from.year = 2018, from.month = 7, from.day = 12, to.year= 2018, to.month = 7, to.day = 12<br>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+<p></p>
+<p>
+	当调用 deleteSchedule() 如下, 日程表将改变成如下图所示
+</p>
+<p>
+	</p><table style="width:100%;" cellspacing="0" cellpadding="2" bordercolor="#000000" border="1">
+		<tbody>
+			<tr>
+				<td>
+					deleteSchedule()<br>
+				</td>
+				<td>
+					date.year = 2018, date.month = 7, date.day = 19, mode = 0<br>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+<br>
+<img src="./SRCG OJ_files/20180723184007_50653.png" alt=""> 
+<p></p>
+<p>
+	<br>
+</p>
+<p>
+	当调用 searchSchedule() 如下,会返回 1
+</p>
+<table style="width:100%;" cellspacing="0" cellpadding="2" border="1">
+	<tbody>
+		<tr>
+			<td>
+				searchSchedule()<br>
+			</td>
+			<td>
+				from.year = 2018, from.month = 7, from.day = 17, to.year= 2018, to.month = 7, to.day = 19<br>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	<br>
+</p>
+<p>
+	即使调用 deleteSchedule() 如下, 日程表没有变化
+</p>
+<table style="width:100%;" cellspacing="0" cellpadding="2" border="1">
+	<tbody>
+		<tr>
+			<td>
+				deleteSchedule()<br>
+			</td>
+			<td>
+				date.year = 2018, date.month = 7, date.day = 19, mode = 1<br>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	<br>
+</p>
+<p>
+	<br>
+</p>
+<p>
+	当调用 deleteSchedule() 如下, 日程表将改变成如下图所示(虽然没显示但可以想象,日程id 4的 2018.08.12 和 2018.09.12 上都会被删除)
+</p>
+<table style="width:100%;" cellspacing="0" cellpadding="2" border="1">
+	<tbody>
+		<tr>
+			<td>
+				deleteSchedule()<br>
+			</td>
+			<td>
+				date.year = 2018, date.month = 7, date.day = 12, mode = 1<br>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	<br>
+</p>
+<p>
+	<img src="./SRCG OJ_files/20180723184501_43435.png" alt=""> 
+</p>
+<p>
+	<br>
+</p>
+<p>
+	当调用 searchSchedule() 如下,会返回 3
+</p>
+<table style="width:100%;" cellspacing="0" cellpadding="2" border="1">
+	<tbody>
+		<tr>
+			<td>
+				searchSchedule()<br>
+			</td>
+			<td>
+				from.year = 2018, from.month = 7, from.day = 9, to.year= 2018, to.month = 7, to.day = 13<br>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	<br>
+</p>
+<h2>
+	[约束条件]
+</h2>
+<p>
+	1. init()会在每个测试用开始调用一次
+</p>
+<p>
+	2. 每个测试用例,所有日期范围从2000.01.01到 2099.12.31,不会有非法输入
+</p>
+<p>
+	3. 2000.01.01是星期六
+</p>
+<p>
+	4. 添加日程时,当重复类型为NONE是, 重复次数必然为1, 否则,重复次数必然为 大于等于2小于等于100
+</p>
+<p>
+	5. 日程不会添加到2099.12.31之后
+</p>
+<p>
+	6. 当删除模式为 1 时, 所有在该日期下日程被删除,且与被删日程相同id的日程都会被删除
+</p>
+<p>
+	7. 每个测试用例,总的API调用次数, 除了init(), 小于等于10000次
+</p>
+<p>
+	<br>
+</p>
+<p>
+	<br>
+</p>
+<p>
+	<br>
+</p></div><h2>输入</h2><div class="content"><h2>
+	C++
+</h2>
+<h2>
+	main code:
+</h2>
+<pre class="prettyprint lang-js">#ifndef _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
+#include &lt;stdio.h&gt;
+
+typedef enum {
+	ADD,
+	DELETE,
+	SEARCH,
+	COMMAND_MAX
+} COMMAND;
+
+typedef enum {
+	NONE,
+	DAILY,
+	WEEKLY,
+	MONTHLY,
+	YEARLY,
+	EVERY3DAYS,
+	EVERY5DAYS,
+	EVERY10DAYS,
+	TYPE_MAX
+} REPEAT_TYPE;
+
+typedef struct {
+	int year;
+	int month;
+	int day;
+} DATE;
+
+typedef struct {
+	REPEAT_TYPE type;
+	int cnt;
+} REPEAT;
+
+extern void init();
+extern void addSchedule(int id, DATE date, REPEAT repeat);
+extern void deleteSchedule(DATE date, int mode);
+extern int searchSchedule(DATE from, DATE to);
+
+int daysOfMonth(int yy, int mm)
+{
+	int days;
+	if (mm == 2) {
+		if ((yy % 400 == 0) || ((yy % 4 == 0) &amp;&amp; (yy % 100 != 0)))
+			days = 29;
+		else
+			days = 28;
+	}
+	else if (mm == 4 || mm == 6 || mm == 9 || mm == 11)
+		days = 30;
+	else
+		days = 31;
+	return days;
+}
+
+static int run()
+{
+	int N, answer;
+	int cmd, param1, param2, param3;
+	int id = 1;
+
+	DATE date, date2;
+	REPEAT repeat;
+	
+	init();
+
+	scanf("%d", &amp;N);
+	answer = 100;
+	for (int i = 0; i &lt; N; ++i) {		
+		scanf("%d", &amp;cmd);
+
+		switch (cmd) {
+		case ADD:
+			scanf("%d %d %d", &amp;param1, &amp;param2, &amp;param3);
+			date.year = 2000 + param1 / 10000;
+			date.month = (param1 / 100) % 100;
+			date.day = param1 % 100;
+			repeat.type = (REPEAT_TYPE)param2;
+			repeat.cnt = param3;
+
+			addSchedule(id, date, repeat);
+			id++;
+			break;
+
+		case DELETE:
+			scanf("%d %d", &amp;param1, &amp;param2);
+			date.year = 2000 + param1 / 10000;
+			date.month = (param1 / 100) % 100;
+			date.day = param1 % 100;
+
+			deleteSchedule(date, param2);
+			break;
+
+		case SEARCH:
+			scanf("%d %d %d", &amp;param1, &amp;param2, &amp;param3);
+			date.year = 2000 + param1 / 10000;
+			date.month = (param1 / 100) % 100;
+			date.day = param1 % 100;
+			date2.year = 2000 + param2 / 10000;
+			date2.month = (param2 / 100) % 100;
+			date2.day = param2 % 100;
+
+			int result = searchSchedule(date, date2);
+			if (result != param3) {
+				answer = 0;
+			}
+		}
+	}
+	
+	return answer;
+}
+
+int main()
+{
+	setbuf(stdout, NULL);
+	//freopen("sample_input.txt", "r", stdin);
+
+	int T;
+	scanf("%d", &amp;T);
+
+	for (int tc = 1; tc &lt;= T; tc++) {
+		printf("#%d %d\n", tc, run());
+	}
+
+	return 0;
+}
+</pre>
+<h2>
+	user code:
+</h2>
+<pre class="prettyprint lang-js">/*typedef enum {
+	NONE,
+	DAILY,
+	WEEKLY,
+	MONTHLY,
+	YEARLY,
+	EVERY3DAYS,
+	EVERY5DAYS,
+	EVERY10DAYS,
+	TYPE_MAX
+} REPEAT_TYPE;
+
+typedef struct {
+	int year;
+	int month;
+	int day;
+} DATE;
+
+typedef struct {
+	REPEAT_TYPE type;
+	int cnt;
+} REPEAT;
+*/
+extern int daysOfMonth(int yy, int mm);
+
+
+void init()
+{
+}
+
+void addSchedule(int id, DATE date, REPEAT repeat)
+{
+}
+
+void deleteSchedule(DATE date, int mode)
+{
+}
+
+int searchSchedule(DATE from, DATE to)
+{
+	return 0;
+}
+</pre>
+<p>
+	<br>
+</p>
+<p>
+	<br>
+</p>
+<br>
+<p>
+	<br>
+</p></div><h2>输出</h2><div class="content"><h2>
+	JAVA
+</h2>
+<p>
+	<br>
+</p>
+<h2>
+	main code:
+</h2>
+<div>
+<pre class="prettyprint lang-js">import java.util.Scanner;
+
+class Main {	
+	private static Scanner sc;
+	private static UserSolution usersolution = new UserSolution();
+	
+	private final static int ADD 			= 0;
+	private final static int DELETE 		= 1;
+	private final static int SEARCH 		= 2;
+	
+	public static class DATE {
+		int year;
+		int month;
+		int day;		
+		public DATE() {
+			year = month = day = 0;
+		}
+	}
+	
+	public static class REPEAT {
+		int type;
+		int cnt;
+		public REPEAT() {
+			type = cnt = 0;
+		}
+	}
+
+	public static int daysOfMonth(int yy, int mm)
+	{
+		int days;
+		if (mm == 2) {
+			if ((yy % 400 == 0) || ((yy % 4 == 0) &amp;&amp; (yy % 100 != 0)))
+				days = 29;
+			else
+				days = 28;
+		}
+		else if (mm == 4 || mm == 6 || mm == 9 || mm == 11)
+			days = 30;
+		else
+			days = 31;
+		return days;
+	}
+
+	private static int run()
+	{
+		int N, answer;
+		int cmd, param1, param2, param3;
+		int id = 1;
+
+		DATE date = new DATE();
+		DATE date2 = new DATE();
+		REPEAT repeat = new REPEAT();
+		
+		usersolution.init();
+
+		N = sc.nextInt();
+		answer = 100;
+		for (int i = 0; i &lt; N; ++i) {		
+			cmd = sc.nextInt();
+
+			switch (cmd) {
+			case ADD:
+				param1 = sc.nextInt();
+				date.year = 2000 + param1 / 10000;
+				date.month = (param1 / 100) % 100;
+				date.day = param1 % 100;
+				repeat.type = sc.nextInt();
+				repeat.cnt = sc.nextInt();
+
+				usersolution.addSchedule(id, date, repeat);
+				id++;
+				break;
+
+			case DELETE:
+				param1 = sc.nextInt();
+				param2 = sc.nextInt();
+				date.year = 2000 + param1 / 10000;
+				date.month = (param1 / 100) % 100;
+				date.day = param1 % 100;
+
+				usersolution.deleteSchedule(date, param2);
+				break;
+
+			case SEARCH:
+				param1 = sc.nextInt();
+				param2 = sc.nextInt();
+				param3 = sc.nextInt();
+				date.year = 2000 + param1 / 10000;
+				date.month = (param1 / 100) % 100;
+				date.day = param1 % 100;
+				date2.year = 2000 + param2 / 10000;
+				date2.month = (param2 / 100) % 100;
+				date2.day = param2 % 100;
+
+				int result = usersolution.searchSchedule(date, date2);
+				if (result != param3) {
+					answer = 0;
+				}
+			}
+		}
+		
+		return answer;
+	}
+	
+	public static void main(String[] args) throws Exception {
+	
+		//System.setIn(new java.io.FileInputStream("res/sample_input.txt"));
+		sc = new Scanner(System.in);
+
+		int TC = sc.nextInt();
+		for (int testcase = 1; testcase &lt;= TC; ++testcase) {
+            System.out.println("#" + testcase + " " + run());
+		}
+
+		sc.close();
+	}
+}
+</pre>
+<br>
+</div>
+<h2>
+	user code:
+</h2>
+<pre class="prettyprint lang-js">class UserSolution {
+	
+	private final static int NONE 			= 0;
+	private final static int DAILY 			= 1;
+	private final static int WEEKLY 		= 2;
+	private final static int MONTHLY 		= 3;
+	private final static int YEARLY 		= 4;
+	private final static int EVERY3DAYS 	= 5;
+	private final static int EVERY5DAYS 	= 6;
+	private final static int EVERY10DAYS 	= 7;
+	
+	public void init()
+	{
+	}
+
+	public void addSchedule(int id, Solution.DATE date, Solution.REPEAT repeat)
+	{
+	}
+
+	public void deleteSchedule(Solution.DATE date, int mode)
+	{
+	}
+
+	public int searchSchedule(Solution.DATE from, Solution.DATE to)
+	{
+		return 0;
+	}
+}
+</pre>
+<p>
+	<br>
+</p></div><h2>样例输入</h2>
+<pre class="content"><span class="sampledata">4
+14
+0 180704 0 1
+0 180709 1 5
+0 180705 2 4
+0 180712 3 3
+0 180715 4 2
+0 180701 5 8
+0 180702 6 4
+0 180709 7 3
+2 180712 180712 4
+1 180719 0
+2 180717 180719 1
+1 180719 1
+1 180712 1
+2 180709 180713 3
+19
+0 180707 4 3
+0 180711 6 3
+0 180801 1 4
+0 180702 3 3
+0 180725 7 2
+0 180723 2 5
+2 180718 180719 0
+0 180717 4 4
+0 180707 6 5
+1 180712 0
+0 180731 4 2
+1 180707 1
+0 180715 2 3
+0 180722 0 1
+1 180725 1
+2 180725 180728 0
+0 180703 4 2
+2 180719 180723 4
+1 180708 0
+90
+0 181116 6 9
+0 181112 7 8
+0 180404 0 1
+0 180709 2 14
+0 181105 7 2
+0 180913 3 4
+0 180412 7 2
+0 180731 7 10
+0 180802 3 2
+0 180907 2 15
+0 180220 7 13
+0 180909 7 4
+0 180526 4 8
+0 180101 1 5
+0 180321 5 6
+0 180810 6 15
+0 180419 7 13
+0 181121 2 13
+0 180720 7 2
+0 180523 7 6
+0 180420 6 8
+0 180716 6 13
+0 181007 0 1
+0 181011 6 6
+0 181003 4 6
+0 180117 5 3
+0 180118 5 9
+0 181221 1 14
+0 180401 5 5
+0 181106 0 1
+1 180510 0
+1 180312 1
+0 180730 1 3
+1 180327 1
+1 180505 1
+1 181211 1
+1 181114 0
+2 180528 180529 1
+2 180421 180426 1
+2 181125 181207 5
+1 180123 1
+1 180810 0
+0 180830 4 8
+1 190101 1
+0 180807 7 3
+1 180806 0
+2 181127 181129 1
+0 180826 3 14
+0 181116 5 8
+1 180703 1
+1 180827 1
+2 180507 180510 1
+0 180222 7 10
+2 181029 181107 6
+2 180616 180621 1
+0 180108 1 13
+1 180625 0
+1 180919 1
+2 181110 181115 2
+1 181031 0
+1 180115 0
+0 180619 5 10
+1 180130 0
+1 180805 0
+1 180526 0
+2 180709 180717 5
+2 180917 180925 1
+0 180619 3 13
+2 180218 180227 1
+2 180927 180928 1
+2 180831 180901 0
+0 180809 1 14
+0 180119 0 1
+1 180220 1
+0 180521 7 12
+2 180522 180604 5
+1 181226 1
+0 180608 4 15
+0 180721 7 10
+0 180910 2 6
+2 180621 180622 2
+0 180516 3 3
+2 180814 180825 16
+2 180124 180126 1
+1 180314 0
+0 180522 4 12
+2 181001 181009 6
+1 180531 0
+0 181110 0 1
+0 180909 6 9
+400
+0 121126 6 20
+0 120430 2 14
+0 110202 0 1
+0 110603 5 4
+0 160929 7 3
+0 100121 4 15
+0 170818 1 20
+0 191118 4 8
+0 121119 6 4
+0 120518 6 11
+0 131016 0 1
+0 140420 1 6
+0 201109 6 12
+0 120721 2 16
+0 181031 1 13
+0 200711 1 2
+0 110412 3 17
+0 100125 6 4
+0 160528 6 17
+0 131020 1 19
+0 181008 2 13
+0 170930 4 9
+0 130514 2 15
+0 200929 0 1
+0 150629 2 17
+0 140826 5 5
+0 191231 0 1
+0 141228 7 17
+0 140803 4 10
+0 110301 3 16
+0 100817 2 2
+0 150405 2 8
+0 171115 4 14
+0 190728 3 20
+0 100620 3 7
+0 200213 7 10
+0 110728 0 1
+0 101021 6 11
+0 130106 4 9
+0 130405 0 1
+0 180526 1 9
+0 141004 4 8
+0 171102 5 7
+0 100606 6 14
+0 200206 0 1
+0 100706 5 2
+0 130717 1 7
+0 110906 4 11
+0 200130 6 16
+0 180424 0 1
+0 160108 6 11
+0 150525 7 8
+0 180424 5 20
+0 100518 1 7
+0 201026 5 11
+0 201013 2 5
+0 120517 7 13
+0 150216 3 5
+0 141119 0 1
+0 121206 6 5
+0 180424 4 11
+0 140323 3 4
+0 110411 7 9
+0 111118 3 9
+0 161109 4 20
+0 120701 3 8
+0 140910 4 14
+0 110208 7 15
+0 120817 7 5
+0 150624 1 19
+0 201014 6 4
+0 170913 1 15
+0 110511 3 2
+0 140322 4 2
+0 101001 5 20
+0 190509 2 19
+0 171223 1 4
+0 110404 6 4
+0 190911 2 11
+0 150720 1 15
+0 100402 1 5
+0 190723 0 1
+0 100730 2 19
+0 181227 5 18
+0 140213 3 8
+0 191019 4 12
+0 100806 4 10
+0 130628 7 10
+0 161031 4 12
+0 140511 7 2
+0 160723 4 5
+0 140316 1 7
+0 180706 3 19
+0 180102 3 10
+0 191223 2 5
+0 150106 2 2
+0 160805 1 18
+0 180828 2 10
+0 130609 7 9
+0 141018 2 20
+0 181202 1 14
+0 100728 4 5
+0 201009 0 1
+0 191027 3 9
+0 110625 1 18
+0 110405 2 14
+0 130825 0 1
+0 160808 2 14
+0 190530 2 5
+0 121222 6 4
+0 120213 2 4
+0 190623 6 14
+0 100411 7 7
+0 170524 1 6
+0 130513 2 6
+0 130622 6 5
+0 200411 3 7
+0 170421 5 4
+0 141128 0 1
+0 160208 7 16
+0 190325 7 20
+0 200913 2 12
+0 150501 7 20
+0 160518 7 11
+0 100517 1 20
+0 110421 0 1
+0 140101 1 13
+0 200104 3 12
+0 190627 2 7
+0 140303 5 4
+0 171003 0 1
+0 160803 5 11
+0 200202 3 18
+1 150718 1
+1 111201 1
+2 190328 190409 2
+0 100201 2 2
+0 131124 2 8
+2 150131 150201 1
+0 160717 5 14
+0 130430 6 14
+0 180716 0 1
+0 100520 5 15
+0 201022 1 18
+0 150329 2 2
+0 161213 5 15
+0 140121 4 14
+1 200804 0
+0 200702 5 3
+0 120426 5 7
+0 141012 7 2
+0 120611 4 19
+2 110803 110806 1
+1 100503 0
+0 180825 4 18
+0 110406 1 5
+1 130619 0
+1 140319 0
+0 180201 5 3
+0 100306 6 12
+0 110831 2 12
+2 131028 131103 7
+2 130625 130628 3
+1 190608 1
+0 170922 0 1
+2 160102 160119 4
+0 160501 0 1
+1 181107 1
+1 110314 1
+2 110529 110613 12
+2 130227 130309 1
+0 150227 3 17
+0 160509 7 17
+2 200821 200827 1
+1 170112 1
+1 190901 0
+0 170824 5 13
+1 170930 1
+1 130529 0
+1 160729 1
+2 200525 200603 3
+0 191129 4 19
+1 130107 1
+2 180328 180406 1
+0 120729 7 9
+1 151227 0
+2 190518 190526 2
+1 131224 0
+2 140126 140211 0
+0 190601 4 7
+0 180212 0 1
+0 150703 4 3
+0 161115 4 2
+2 120305 120314 2
+1 180703 1
+1 101220 0
+2 160728 160814 23
+1 190516 0
+0 140218 1 8
+0 190824 7 10
+2 190905 190914 8
+0 150209 6 13
+2 170101 170101 0
+0 151216 7 9
+0 110427 5 18
+1 170528 1
+2 110512 110522 8
+0 160116 0 1
+0 201011 2 20
+0 101015 7 9
+0 161105 5 7
+2 200120 200122 3
+1 100929 1
+1 201013 1
+0 130813 2 19
+0 101008 2 11
+0 130906 2 13
+1 130529 0
+1 191128 0
+1 120514 1
+0 110601 1 20
+0 190407 0 1
+1 150704 1
+1 151008 0
+0 200517 6 5
+0 191218 7 4
+0 150622 4 10
+1 140316 0
+2 180402 180418 1
+1 190923 1
+0 100626 3 13
+0 110831 7 19
+2 150925 151011 5
+1 140121 1
+1 190412 1
+2 200705 200708 2
+0 160413 1 15
+1 190911 1
+0 190219 7 7
+2 200822 200830 2
+0 120824 1 7
+0 171104 2 15
+2 160902 160907 4
+0 100531 2 15
+2 120725 120728 3
+0 140415 7 4
+0 160624 0 1
+0 181108 2 18
+0 110531 7 8
+0 140404 5 8
+1 120412 0
+0 170127 4 11
+0 121022 6 3
+1 180805 0
+2 190523 190528 1
+0 100909 2 5
+2 120723 120807 8
+1 150919 0
+2 191126 191211 3
+2 190513 190526 1
+0 140202 1 5
+0 150618 4 5
+0 160306 6 8
+1 151228 1
+1 150110 1
+0 200419 6 7
+1 110504 1
+1 161017 1
+1 140225 0
+0 200307 5 5
+0 200915 6 11
+2 200306 200316 7
+2 141228 150101 1
+0 170111 3 4
+2 120514 120601 6
+1 120206 1
+1 190509 1
+1 170908 0
+1 181231 1
+0 191101 5 8
+0 140714 4 17
+0 190629 0 1
+0 170916 1 11
+0 151005 1 16
+2 140206 140221 6
+1 130712 0
+2 200507 200523 7
+0 190608 1 8
+0 190504 1 17
+1 140105 1
+0 120429 2 3
+2 200309 200312 2
+0 140428 6 5
+0 201022 5 7
+1 190219 1
+0 130529 5 16
+0 100207 1 12
+0 200331 5 12
+0 140222 3 19
+0 141121 3 4
+1 140322 0
+2 130114 130118 1
+0 170916 1 11
+2 121219 130103 9
+1 190510 1
+0 110809 7 5
+1 100826 0
+2 101109 101110 2
+1 201214 1
+2 130703 130722 18
+0 111015 0 1
+1 140530 0
+0 180809 5 3
+2 180727 180809 5
+0 120904 4 3
+1 120208 1
+1 160321 1
+1 191101 1
+0 150402 5 8
+0 140308 7 9
+1 201125 0
+0 100123 7 2
+0 170306 4 9
+1 100622 0
+2 190910 190915 1
+0 110708 1 16
+1 201023 0
+2 141222 150109 5
+0 140314 2 17
+1 140309 0
+2 120429 120504 1
+0 150303 1 16
+0 200218 3 10
+2 110703 110721 28
+0 160809 6 7
+0 140717 5 14
+0 170920 3 3
+0 110412 7 14
+1 120422 0
+1 151109 0
+2 180518 180518 1
+0 120912 4 20
+0 150729 5 11
+0 190802 6 18
+0 161108 4 6
+2 160507 160512 2
+0 111126 6 16
+0 150520 6 17
+0 130618 5 17
+0 101127 0 1
+2 120809 120813 2
+0 151019 0 1
+0 140320 6 3
+0 200807 5 11
+2 150720 150725 10
+0 120927 7 5
+2 120110 120118 5
+1 170826 1
+0 141118 3 4
+2 191109 191110 1
+0 200121 7 15
+1 131119 1
+2 101128 101216 8
+0 111210 6 12
+1 200627 1
+2 200409 200413 6
+0 200815 5 11
+0 120626 1 15
+1 151018 1
+2 201005 201010 3
+2 120306 120321 2
+0 181201 2 6
+0 150706 1 10
+0 100825 3 3
+0 100920 0 1
+1 180812 1
+1 190627 1
+1 200518 0
+2 160613 160627 12
+1 110412 1
+0 110807 7 6
+2 180520 180530 9
+0 131016 5 2
+2 200914 201003 11
+0 131001 3 4
+2 190415 190430 1
+0 190419 0 1
+0 190926 6 18
+1 101101 1
+1 200705 0
+0 151016 2 8
+1 201106 1
+0 101001 3 5
+0 101225 3 9
+1 100611 1
+0 110128 2 3
+0 101015 3 18
+0 191130 0 1
+2 190731 190814 9
+0 190324 1 7
+</span></pre><h2>样例输出</h2>
+<pre class="content"><span class="sampledata">#1 100
+#2 100
+#3 100
+#4 100
+</span></pre><h2>提示</h2>
+<div class="content"><p></p></div><h2>来源</h2>
+<div class="content"><p><a href="http://109.131.7.129/OJ/problemset.php?search=PRO">PRO</a></p></div><center>[<a href="http://109.131.7.129/OJ/submitpage.php?id=1293">提交</a>][<a href="http://109.131.7.129/OJ/problemstatus.php?id=1293">状态</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="./SRCG OJ_files/jquery.min.js.下载"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="./SRCG OJ_files/bootstrap.min.js.下载"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<marquee  id=broadcast scrollamount=3 scrolldelay=30 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"~SRC-G Online Judge\u7cfb\u7edf~ \u8bb2\u5e08\u56e2\u6210\u5458:suxian.zhang(\u6821\u957f);shuyi.luo(\u4e13\u5bb6);junnan.fu(\u7248\u4e3b);jianhui.yan;y2016.liu;yuqing26.wu;hr.z;jx.liang;qyong.liang;tianwei.hong;jiaqi.shao;jian.guan;jida.liu;yiluo.huang;\r\n"+"</marquee>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+});
+
+</script>
+
+	    
+  
+
+<!--not cached-->
+
+<div id="footer" class="center">GPLv2 licensed by <a href="https://github.com/zhblue/hustoj">HUSTOJ</a> 2018 </div></body></html>

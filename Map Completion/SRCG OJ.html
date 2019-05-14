@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://109.131.7.129/OJ/problem.php?cid=1057&pid=0 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://109.131.7.129/favicon.ico">
+
+    <title>SRCG OJ</title>  
+    
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="./SRCG OJ_files/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="./SRCG OJ_files/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./SRCG OJ_files/local.css">
+
+
+
+	    
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+          <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://109.131.7.129/OJ/">SRCG OJ</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	                    <li><a href="http://109.131.7.129/OJ/bbs.php">讨论版</a></li>
+	      <li><a href="http://109.131.7.129/OJ/faqs.php">常见问答</a></li>
+              <li><a href="http://109.131.7.129/OJ/problemset.php">问题</a></li>
+              <li><a href="http://109.131.7.129/OJ/status.php">状态</a></li>
+              <li><a href="http://109.131.7.129/OJ/ranklist.php">排名</a></li>
+              <li><a href="http://109.131.7.129/OJ/contest.php">竞赛&amp;作业</a></li>
+	      <li><a>[</a></li>
+              <li class="active"><a href="http://109.131.7.129/OJ/contest.php?cid=1057">
+			问题	      </a></li>
+               <li class="active"><a href="http://109.131.7.129/OJ/status.php?cid=1057">
+			状态	      </a></li>
+              <li class="active"><a href="http://109.131.7.129/OJ/contestrank.php?cid=1057">
+			排名	      </a></li>
+              <!--<li  class="active" ><a href="contestrank-oi.php?cid=1057">
+			OI排名	      </a></li>-->
+              <li class="active"><a href="http://109.131.7.129/OJ/conteststatistics.php?cid=1057">
+			统计	      </a></li>
+	      <li><a>]</a></li>
+              <!--<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+	-->
+            </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    <li class="dropdown">
+            <a href="http://109.131.7.129/OJ/problem.php?cid=1057&amp;pid=0#" class="dropdown-toggle" data-toggle="dropdown"><span id="profile">登录</span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+<script src="./SRCG OJ_files/profile.php"></script><li><a href="http://109.131.7.129/OJ/loginpage.php">登录</a></li>&nbsp;<li><a href="http://109.131.7.129/OJ/registerpage.php">注册</a></li>&nbsp;
+              <!--<li><a href="../navbar-fixed-top/">Fixed top</a></li>-->
+	    </ul>
+	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+
+	    
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron"><marquee id="broadcast" scrollamount="3" scrolldelay="30" onmouseover="this.stop()" onmouseout="this.start()" class="toprow">~SRC-G Online Judge系统~ 讲师团成员:suxian.zhang(校长);shuyi.luo(专家);junnan.fu(版主);jianhui.yan;y2016.liu;haoran.lv;yuqing26.wu;hr.z;jx.liang;qyong.liang;tianwei.hong;qu.xiong;jiaqi.shao;jian.guan;yiluo.huang;
+</marquee>
+	
+<title>问题 A: ★Map Completion </title><center><h2>问题 A: ★Map Completion</h2><span class="green">时间限制: </span>10 Sec&nbsp;&nbsp;<span class="green">内存限制: </span>256 MB&nbsp;&nbsp;<span class="red">Special Judge</span><br><span class="green">提交: </span>1037&nbsp;&nbsp;<span class="green">解决: </span>258<br>[<a href="http://109.131.7.129/OJ/submitpage.php?cid=1057&amp;pid=0&amp;langmask=0">提交</a>][<a href="http://109.131.7.129/OJ/problemstatus.php?id=1278">状态</a>][<a href="http://109.131.7.129/OJ/bbs.php?pid=1278&amp;cid=1057">讨论版</a>]</center><h2>题目描述</h2><div class="content"><p class="MsoNormal">
+	<br>
+</p>
+<table class="MsoTableGrid" style="border:none;" cellspacing="0" cellpadding="0" border="1">
+	<tbody>
+		<tr>
+			<td style="border:solid windowtext 1.0pt;" width="83" valign="top">
+				<p class="MsoNormal">
+					<span style="font-size:14px;font-family:&quot;">Restrictions</span> 
+				</p>
+			</td>
+			<td style="border:solid windowtext 1.0pt;" width="485" valign="top">
+				<p class="MsoNormal">
+					<span style="font-size:14px;font-family:&quot;">Execution
+  time: within 3 sec for maximum 50 test cases</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:14px;font-family:&quot;">Memory:
+  Maximum 256MB available for heap, global and stack combined (note: Maximum
+  1MB can be used for stack)</span> 
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="MsoNormal">
+	<br>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-size:14px;font-family:&quot;">[Cautions
+for Coding]</span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-size:14px;font-family:&quot;">1.
+Test takers who will be using C or C++ to write their answer, please select C++
+as for the Language before submit the answer.</span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-size:14px;font-family:&quot;">2.
+Consists of the Main part and User Code part.</span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A.
+Main Part: Cannot be edited. Codes just as submitted will be used for grading.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B.
+User Code Part: Code which the test taker must actually write.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When
+submitting the answer, not only library functions within the code but also
+standard input/output functions cannot be included.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Note:
+Only the malloc.h is available in case of C/C++)</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C.
+In the server, main part and user code part will be split to separate files and
+compiled.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (main.cpp/solition.cpp
+or Solution.java/UserSolution.java)</span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-size:14px;font-family:&quot;">3.
+Cautions When Programming on Local PC</span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A.
+2 files must be generated.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (main.cpp/solition.cpp
+or Solution.java/UserSolution.java)</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B.
+Please copy the Main part into main.cpp or Solution.java</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C.
+To user the sample_input.txt, uncomment the code (commented) which uses the
+file as the standard input within the Main part code.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D.
+After writing the User code part, before submitting, delete library functions
+for debugging and all standard input/output functions or comment.</span> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-size:14px;font-family:&quot;">4.
+Since not all constrains are specified in this document, analyze the given code
+for further information.</span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-size:14px;font-family:&quot;">5.
+Given codes can differ depending on the programming language. Analyze codes
+according to your language selection.</span></b> 
+</p>
+<p class="MsoNormal">
+	<br>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-size:14px;font-family:&quot;">[Description]</span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">There is an NxN size terrain.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">We are trying to make a map of
+the terrain as show in [Fig.1].</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:&quot;font-size:14px;"><img src="./SRCG OJ_files/20180310141021_92327.png" alt=""><br>
+</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:&quot;"><strong>[Fig.1]</strong></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;"><br>
+</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:&quot;">The number on each cell denotes
+topographic information of the terrain.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">The topographical information of
+two outermost borderline cells of the terrain is known, but no other terrain
+information is known.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:&quot;font-size:14px;"><img src="./SRCG OJ_files/20180310141045_76393.png" alt=""><br>
+</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:&quot;"><strong>[Fig.2]</strong></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;"><br>
+</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:&quot;">A satellite scans 4x4 size
+terrain information as it passes over the terrain.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">We are trying to complete the map
+by using this information.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">However, you do not know the
+exact location of the scanned terrain.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="color:#E53333;font-size:14px;font-family:&quot;">Only the information
+that the top leftmost position of the scanned terrain information is located in
+an even-numbered row and an even-numbered column is known. (Row and column
+starts from 0.)</span> 
+</p>
+<p class="MsoNormal">
+	<img src="./SRCG OJ_files/20180310141100_38841.png" alt=""> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;"><strong>[Fig.3]</strong></span><span style="font-family:&quot;"><strong>&nbsp;</strong></span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:&quot;font-size:14px;"><br>
+</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">Additionally, the scanned
+information does not deviate from the given terrain.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:&quot;">When the information about two
+outermost borderline cells of the terrain is given, implement an API that
+completes N x N terrain map from the scanned information.</span><span style="font-family:&quot;">&nbsp;</span> 
+</p>
+<p class="MsoNormal">
+	<span style="color:#E53333;font-size:14px;font-family:&quot;">It is favorable to call
+as little as possible the randomscan() function, which carries the scanned
+terrain information.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="color:#E53333;font-size:14px;font-family:&quot;">Implement each function
+the API explanation below.</span> 
+</p>
+<p class="MsoNormal">
+	<br>
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">※
+The function signature below is based on C/C++. As for Java, refer to the
+provided Solution.java and UserSolution.java.</span> 
+</p>
+<table class="MsoTableGrid" style="border:none;" cellspacing="0" cellpadding="0" border="1">
+	<tbody>
+		<tr>
+			<td style="border:solid windowtext 1.0pt;" width="568" valign="top">
+				<p class="MsoNormal">
+					<b><span style="font-size:14px;font-family:&quot;">void</span></b><b><span style="font-size:12.0pt;font-family:&quot;"><span style="font-size:14px;font-family:&quot;"> reconstruct (</span><span style="color:blue;font-size:14px;font-family:&quot;">int </span><span style="font-size:14px;font-family:&quot;">N, </span><span style="color:blue;font-size:14px;font-family:&quot;">char </span><span style="font-size:14px;font-family:&quot;">map[][])</span></span></b> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border:solid windowtext 1.0pt;" width="568" valign="top">
+				<p class="MsoNormal">
+					<span style="font-size:14px;font-family:&quot;">This is a function that
+  completes the map.</span> 
+				</p>
+				<p class="MsoNormal">
+					<br>
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:14px;font-family:&quot;">When this function is called,
+  the topographical information of two outermost borderline cells is stored in
+  the corresponding location in the map array. In other locations, 0 values are
+  stored.</span> 
+				</p>
+				<p class="MsoNormal">
+					<br>
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:14px;font-family:&quot;">When the function ends, the
+  completed map must be stored in the map array.</span> 
+				</p>
+				<p class="MsoNormal">
+					<br>
+				</p>
+				<p class="MsoNormal">
+					<b><i><span style="font-size:14px;font-family:&quot;">Parameters</span></i></b> 
+				</p>
+				<p class="MsoNormal" style="text-indent:11.25pt;">
+					<span style="font-size:14px;font-family:&quot;">N:
+  the length of a side of the map ( 8 &lt;= N &lt;= 64, multiple of 4)</span> 
+				</p>
+				<p class="MsoNormal" style="text-indent:11.25pt;">
+					<span style="font-size:14px;font-family:&quot;">map:
+  The map array to complete (1 &lt;= map[][] &lt;= 15)</span> 
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">&nbsp;</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">Below is the explanation of API
+which is provided in the Main part.</span> 
+</p>
+<table class="MsoTableGrid" style="border:none;" cellspacing="0" cellpadding="0" border="1">
+	<tbody>
+		<tr>
+			<td style="border:solid windowtext 1.0pt;" width="568" valign="top">
+				<p class="MsoNormal">
+					<b><span style="font-size:14px;font-family:&quot;">void</span></b><b><span style="font-size:12.0pt;font-family:&quot;"><span style="font-size:14px;font-family:&quot;"> randomscan (</span><span style="color:blue;font-size:14px;font-family:&quot;">char </span><span style="font-size:14px;font-family:&quot;">zone[][])</span></span></b> 
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border:solid windowtext 1.0pt;" width="568" valign="top">
+				<p class="MsoNormal">
+					<span style="font-size:14px;font-family:&quot;">This is a function that scans
+  the information of terrain with a size of 4x4 at a random location.</span> 
+				</p>
+				<p class="MsoNormal">
+					<br>
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:14px;font-family:&quot;">The scanned information is
+  stored in the zone.</span> 
+				</p>
+				<p class="MsoNormal">
+					<span style="font-size:14px;font-family:&quot;">The top leftmost position of
+  the scanned information is always an even-numbered column and even-numbered
+  row.</span> 
+				</p>
+				<p class="MsoNormal">
+					<br>
+				</p>
+				<p class="MsoNormal">
+					<b><i><span style="font-size:14px;font-family:&quot;">Parameters</span></i></b> 
+				</p>
+				<p class="MsoNormal" style="text-indent:11.25pt;">
+					<span style="font-size:14px;font-family:&quot;">zone:
+  An array in which the scanned terrain information is stored.</span> 
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p class="MsoNormal">
+	<span style="font-family:&quot;">For more detailed information,
+analyze the Main part.</span> 
+</p>
+<p class="MsoNormal">
+	<br>
+</p>
+<p class="MsoNormal">
+	<b><span style="font-size:14px;font-family:&quot;"><br>
+</span></b> 
+</p>
+<p class="MsoNormal">
+	<b><span style="font-size:14px;font-family:&quot;">[Constraints]</span></b> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">1. The length of one side of the
+terrain is a multiple of four, greater than or equal to 8 and less than or
+equal to 64.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">2. The terrain information is an
+integer greater than or equal to 1 and less than or equal to 15.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">3. randomscan() function is
+called at most 100,000 times.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">4. The less you call randomscan()
+function, the more favorable your answer will be.</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-size:14px;font-family:&quot;">5. In a given test case, if the
+number of pieces of terrain information matching the scanned information is
+more than or equal to 8, and there is no different information when the terrain
+information and the scanned information is compared, then it is guaranteed that
+it is the scanned area.</span> 
+</p>
+<p>
+	<br>
+</p></div><h2>输入</h2><div class="content"><p>
+	<strong><span style="color:#009900;font-family:&quot;font-size:14px;">//main.cpp</span></strong> 
+</p>
+<p>
+	<br>
+</p>
+<pre class="prettyprint lang-js">#ifndef _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
+#include &lt;stdio.h&gt;
+
+#define MAX_MAP_SIZE		64
+#define ZONE_SIZE			4
+
+#define MAX_SCAN_COUNT		100000
+
+extern void reconstruct(int N, char map[MAX_MAP_SIZE][MAX_MAP_SIZE]);
+
+static char map[MAX_MAP_SIZE][MAX_MAP_SIZE];
+static int N;
+static int seed;
+static int scancount;
+
+static int pseudo_rand() {
+	seed = seed * 214013 + 2531011;
+	return (seed &gt;&gt; 16) &amp; 0x7fff;
+}
+
+void randomscan(char zone[ZONE_SIZE][ZONE_SIZE]) {
+	if (scancount &gt;= MAX_SCAN_COUNT)
+		return;
+
+	int x0 = (pseudo_rand() % ((N - ZONE_SIZE) / 2 + 1)) * 2;  // x0 = 0, 2, 4, ..., N - 4
+	int y0 = (pseudo_rand() % ((N - ZONE_SIZE) / 2 + 1)) * 2;  // y0 = 0, 2, 4, ..., N - 4
+	
+	for (int y = 0; y &lt; ZONE_SIZE; ++y)
+	for (int x = 0; x &lt; ZONE_SIZE; ++x)
+		zone[y][x] = map[y + y0][x + x0];
+	
+	++scancount;
+}
+
+static void makemap() {	
+	for (int y = 0; y &lt; N; ++y)
+	for (int x = 0; x &lt; N; ++x)
+		map[y][x] = pseudo_rand() % 15 + 1;
+}
+
+static bool compare(char map1[MAX_MAP_SIZE][MAX_MAP_SIZE], char map2[MAX_MAP_SIZE][MAX_MAP_SIZE]) {
+	for (int y = 0; y &lt; N; ++y)
+	for (int x = 0; x &lt; N; ++x)
+		if (map1[y][x] != map2[y][x])
+			return false;
+	
+	return true;
+}
+
+int main() {
+    int TC, totalscore, totalscan;
+
+    //freopen("sample_input.txt", "r", stdin);
+
+	setbuf(stdout, NULL);
+    scanf("%d", &amp;TC);
+
+    totalscore = totalscan = 0;
+    for (int testcase = 1; testcase &lt;= TC; ++testcase) {
+		char guess[MAX_MAP_SIZE][MAX_MAP_SIZE];
+		int  min_scan_count;
+		
+		scanf("%d %d %d", &amp;N, &amp;seed, &amp;min_scan_count);
+
+        makemap();
+		
+		scancount = 0;
+		
+		for (int y = 0; y &lt; N; ++y)
+		for (int x = 0; x &lt; N; ++x)
+			guess[y][x] = 0;
+		
+		for (int k = 0; k &lt; N; ++k) {
+			guess[k][0] = map[k][0];
+			guess[0][k] = map[0][k];
+			guess[k][1] = map[k][1];
+			guess[1][k] = map[1][k];
+			guess[k][N - 1] = map[k][N - 1];
+			guess[N - 1][k] = map[N - 1][k];
+			guess[k][N - 2] = map[k][N - 2];
+			guess[N - 2][k] = map[N - 2][k];
+		}
+		
+		reconstruct(N, guess);
+		
+		if (!compare(map, guess))
+			scancount = MAX_SCAN_COUNT;
+		totalscan += scancount;
+		
+		int score;
+		if (TC == 5) { // sample testcase
+			score = scancount &lt; MAX_SCAN_COUNT ? 100 : 0;
+			totalscore += score;
+		} else { // eval testcase
+			score = scancount &lt;= min_scan_count + (min_scan_count / 2) ? 100 : 0;
+			totalscore += score;
+		}
+		
+		printf("#%d %d\n", testcase, score);
+    }
+
+	if (totalscan &gt; MAX_SCAN_COUNT) totalscan = MAX_SCAN_COUNT;
+    printf("total score = %d, total scan = %d\n", totalscore / TC, totalscan);
+    return 0;
+}
+</pre>
+<p>
+	<strong><span style="color:#009900;">//solution.cpp</span></strong><span style="color:#009900;"></span> 
+</p>
+<p>
+	<br>
+</p>
+<pre class="prettyprint lang-js">/*
+#define MAX_MAP_SIZE	64
+#define ZONE_SIZE		4
+*/
+extern void randomscan(char zone[ZONE_SIZE][ZONE_SIZE]);
+
+void reconstruct(int N, char map[MAX_MAP_SIZE][MAX_MAP_SIZE]) {
+
+}
+</pre>
+<p>
+	<br>
+</p>
+<p>
+	<br>
+</p></div><h2>输出</h2><div class="content"><p class="MsoNormal">
+	<span style="font-family:Arial;font-size:12px;">Input/Output is processed in the given Main part code. Therefore, you should not use Input/Output functions separately in the User Code part code.&nbsp;</span> 
+</p>
+<p class="MsoNormal">
+	<span style="font-family:Arial;font-size:12px;">The correct output result for the sample input will be shown as follows.</span> 
+</p>
+<p>
+	<br>
+</p></div><h2>样例输入</h2>
+<pre class="content"><span class="sampledata">5
+8 26585 3
+12 24059 28
+16 26751 50
+20 19164 100
+24 10446 153</span></pre><h2>样例输出</h2>
+<pre class="content"><span class="sampledata">#1 100
+#2 100
+#3 100
+#4 100
+#5 100
+total score = 100, total scan = 334
+</span></pre><h2>提示</h2>
+<div class="content"><p></p></div><center>[<a href="http://109.131.7.129/OJ/submitpage.php?cid=1057&amp;pid=0&amp;langmask=0">提交</a>][<a href="http://109.131.7.129/OJ/problemstatus.php?id=1278">状态</a>]</center>      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="./SRCG OJ_files/jquery.min.js.下载"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="./SRCG OJ_files/bootstrap.min.js.下载"></script>
+
+<!--<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+-->
+<script>
+$(document).ready(function(){
+  var msg="<marquee  id=broadcast scrollamount=3 scrolldelay=30 onMouseOver='this.stop()'"+
+      " onMouseOut='this.start()' class=toprow>"+"~SRC-G Online Judge\u7cfb\u7edf~ \u8bb2\u5e08\u56e2\u6210\u5458:suxian.zhang(\u6821\u957f);shuyi.luo(\u4e13\u5bb6);junnan.fu(\u7248\u4e3b);jianhui.yan;y2016.liu;haoran.lv;yuqing26.wu;hr.z;jx.liang;qyong.liang;tianwei.hong;qu.xiong;jiaqi.shao;jian.guan;yiluo.huang;\n"+"</marquee>";
+  $(".jumbotron").prepend(msg);
+  $("form").append("<div id='csrf' />");
+  $("#csrf").load("csrf.php");
+  $("body").append("<div id=footer class=center >GPLv2 licensed by <a href='https://github.com/zhblue/hustoj' >HUSTOJ</a> "+(new Date()).getFullYear()+" </div>");
+});
+
+</script>
+
+	    
+  
+
+<!--not cached-->
+
+<div id="footer" class="center">GPLv2 licensed by <a href="https://github.com/zhblue/hustoj">HUSTOJ</a> 2018 </div></body></html>
